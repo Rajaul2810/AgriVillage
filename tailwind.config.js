@@ -13,6 +13,10 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    fontFamily:{
+      main:["Titillium Web","sans-serif"],
+      second:["Covered By Your Grace","cursive"],
+    }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
