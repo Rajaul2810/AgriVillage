@@ -2,9 +2,8 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import Image from 'next/image';
-import login from '../../../public/assets/head.jpg'
 import Link from 'next/link'
+import { BsArrowRightCircle } from 'react-icons/bs';
 
 
 const Registration = () => {
@@ -36,13 +35,13 @@ const Registration = () => {
             </div>
 
             <section className='bg-lime-50'>
-                <div className=' flex justify-center pt-5 pb-5'>
-                    <div className=' w-full md:w-4/5 lg:3/5 grid grid-cols-1 sm:grid-cols-2 card bg-base-100 shadow-xl m-5 pt-10 pb-10 px-5 py-3'>
+                <div className=' flex justify-center'>
+                    <div className=' md:w-2/6 p-5 pe-10 ps-10 bg-base-100 shadow-xl mt-5 mb-5 rounded-md'>
                         <div>
-                            <h1 className=' font-bold text-xl text-center'>Login</h1>
-                            <div className=' flex justify-center '>
+                            <h1 className=' font-bold text-xl text-center'>Registration</h1>
+                            <div className=' '>
                                 <form onSubmit={formik.handleSubmit}>
-                                    <div className="mb-3">
+                                    <div className="mb-2">
                                         <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">
                                             Name
                                         </label>
@@ -60,7 +59,7 @@ const Registration = () => {
                                         )}
                                     </div>
 
-                                    <div className="mb-3">
+                                    <div className="mb-2">
                                         <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-700">
                                             Phone
                                         </label>
@@ -78,7 +77,7 @@ const Registration = () => {
                                         )}
                                     </div>
 
-                                    <div className="mb-3">
+                                    <div className="mb-2">
                                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">
                                             Email
                                         </label>
@@ -96,7 +95,7 @@ const Registration = () => {
                                         )}
                                     </div>
 
-                                    <div className="mb-3">
+                                    <div className="mb-2">
                                         <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-700">
                                             Password
                                         </label>
@@ -114,7 +113,7 @@ const Registration = () => {
                                         )}
                                     </div>
 
-                                    <div className="mb-3">
+                                    <div className="mb-2">
                                         <label htmlFor="confirmPassword" className="block mb-2 text-sm font-medium text-gray-700">
                                             Confirm Password
                                         </label>
@@ -133,15 +132,12 @@ const Registration = () => {
                                         )}
                                     </div>
 
-                                    <button type="submit" className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded">
-                                        Register
+                                    <button type="submit" className=" bg-gradient-to-r from-green-600 to-lime-400 text-white py-2 px-5 rounded-full shadow-lg text-md transform hover:scale-105 duration-500 flex items-center gap-1">
+                                        Registration <BsArrowRightCircle/>
                                     </button>
                                 </form>
                             </div>
                             <p className=' text-center text-gray-400 text-sm mb-4 mt-4'>Already Have An Account? <Link href='/login'><span className=' text-green-500 underline'>Login</span></Link> </p>
-                        </div>
-                        <div>
-                            <Image src={login} alt='login' className=' h-full w-full rounded-md' />
                         </div>
                     </div>
                 </div>

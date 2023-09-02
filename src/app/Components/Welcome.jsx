@@ -2,12 +2,12 @@ import Image from 'next/image'
 import React from 'react'
 import wel from '../../../public/assets/girl.jpg'
 import village from '../../../public/assets/sunflower.jpg'
-import { BsFillCheckCircleFill } from 'react-icons/bs'
+import { BsFillCheckCircleFill,BsArrowRightCircle } from 'react-icons/bs'
 import Link from 'next/link'
 
 const Welcome = () => {
     return (
-        <section className=' bg-green-50'>
+        <section className=' bg-white'>
 
             <div className=' flex justify-center items-center pt-20 pb-20 p-5 '>
                 <div className='w-full sm:w-2/4 md:w-3/4 grid grid-cols-1 md:grid-cols-2 place-items-center '>
@@ -37,8 +37,8 @@ const Welcome = () => {
                                 <p className=' text-xs ms-2'>Best Quality Standards</p>
                             </div>
                             <div className=' flex gap-3 items-center pt-4'>
-                                <Link href='/products' className=' bg-gradient-to-r from-green-500 to-lime-400 shadow-lg text-xs text-white px-5 py-2 rounded-full transform hover:scale-105 duration-500'>Buy Product</Link>
-                                <Link href='/projects' className=' bg-yellow-400 py-2 px-5 rounded-full shadow-lg text-xs text-black  transform hover:scale-105 duration-500'>Visit Farm</Link>
+                                <Link href='/products' className=' bg-gradient-to-r from-green-500 to-lime-400 shadow-lg text-xs text-white px-5 py-2 rounded-full transform hover:scale-105 duration-500 flex items-center gap-1'>Buy Product <BsArrowRightCircle/></Link>
+                                <Link href='/projects' className=' bg-yellow-400 py-2 px-5 rounded-full shadow-lg text-xs text-black  transform hover:scale-105 duration-500 flex items-center gap-1'>Visit Farm <BsArrowRightCircle/></Link>
                             </div>
                         </div>
                     </div>

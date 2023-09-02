@@ -1,10 +1,9 @@
 "use client"
 import React from 'react';
-import Image from 'next/image'
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import login from '../../../public/assets/head.jpg'
 import Link from 'next/link'
+import { BsArrowRightCircle } from 'react-icons/bs';
 
 const Login = () => {
     const formik = useFormik({
@@ -27,8 +26,8 @@ const Login = () => {
                 <p className=' text-white text-2xl font-semibold pt-5 blur-none'>Login</p>
             </div>
             <section className=' bg-lime-50'>
-                <div className=' flex justify-center pt-5 pb-5'>
-                    <div className=' w-full md:w-4/5 lg:3/5 grid grid-cols-1 sm:grid-cols-2 card bg-base-100 shadow-xl m-5 pt-10 pb-10 px-5 py-3'>
+                <div className=' flex justify-center'>
+                    <div className='p-8 bg-base-100 shadow-xl m-8 rounded-md'>
                         <div>
                             <h1 className=' font-bold text-xl text-center'>Login</h1>
                             <div className=' flex justify-center '>
@@ -70,18 +69,14 @@ const Login = () => {
                                         )}
                                     </div>
 
-                                    
-
-                                    <button type="submit" className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded">
-                                        Login
+                                    <button type="submit" className=" bg-gradient-to-r from-green-600 to-lime-400 text-white py-2 px-5 rounded-full shadow-lg text-md transform hover:scale-105 duration-500 flex items-center gap-1">
+                                        Login <BsArrowRightCircle/>
                                     </button>
                                 </form>
                             </div>
                             <p className=' text-center text-gray-400 text-sm mb-4 mt-4'>Create An Account? <Link href='/regi'><span className=' text-green-500 underline'>Registration</span></Link> </p>
                         </div>
-                        <div>
-                          <Image src={login} alt='login' className=' h-full w-full rounded-md' />
-                        </div>
+                      
                     </div>
                 </div>
 
