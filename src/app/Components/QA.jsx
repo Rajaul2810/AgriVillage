@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import wel from "../../../public/assets/girl.jpg";
+import wel from "../../../public/assets/qa.jpg";
 
 const qas = [
   {
