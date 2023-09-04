@@ -12,6 +12,8 @@ import {
 } from "react-icons/bs";
 import { MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import Link from "next/link";
+import Image from "next/image";
+import logo from '../../../public/assets/girl2.jpg'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +50,7 @@ export const Navbar = () => {
         </section>
       </div>
 
-      <section>
+      <section className="">
         <div className="flex justify-center items-center">
           <nav className=" flex justify-between w-full lg:w-3/4 md:w-full rounded-b-3xl rounded-t-2xl bg-white shadow-md h-16 me-2 ms-2">
             {/* mobile */}
@@ -114,21 +116,43 @@ export const Navbar = () => {
 
             <div className=" flex justify-between items-center me-10">
               <div className="indicator me-10">
-                <span className="indicator-item badge badge-secondary">
-                  2
-                </span>
+                <span className="indicator-item badge badge-secondary">2</span>
                 <p className=" bg-gradient-to-r from-green-500 to-lime-400 rounded-full p-2">
                   <BsBagDash color="white" />
                 </p>
               </div>
 
               {/* <button className=' bg-gradient-to-r from-green-600 to-lime-400  p-2 text-white transform hover:scale-105 duration-500 animate-pulse'>Login <BsArrowRightShort /></button> */}
-              <Link
+              {/* <Link
                 href="/login"
                 className=" cursor-pointer bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md text-white hover:text-white/50 font-semibold "
               >
                 Login
-              </Link>
+              </Link> */}
+              <div className="dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <Image src={logo} alt="logo" />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <Link href="profile" className="justify-between">
+                      Profile
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href='/dashboard'>Dashboard</Link>
+                  </li>
+                  <hr className="mt-2 pb-2" />
+                  <li>
+                    <a>Logout</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </nav>
         </div>

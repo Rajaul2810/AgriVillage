@@ -22,7 +22,7 @@ const Login = () => {
     });
     return (
         <section>
-            <div className='page_banner h-56 relative grid place-content-center bg-cover bg-center bg-no-repeat'>
+            <div className='page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat'>
                 <p className=' text-white text-2xl font-semibold pt-5 blur-none'>Login</p>
             </div>
             <section className=' bg-lime-50'>
