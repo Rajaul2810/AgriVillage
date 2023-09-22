@@ -6,6 +6,7 @@ import vill from '../../../public/assets/head.jpg'
 import sorisa from '../../../public/assets/sorisa.jpg'
 import sun from '../../../public/assets/sunflower.jpg'
 import { BsArrowRightCircle } from 'react-icons/bs'
+import Link from 'next/link'
 
 const projects = [
     {
@@ -47,9 +48,9 @@ const Projects = () => {
                                             <FaMapMarkerAlt size={15} color='green' />
                                             <p className=' text-xs font-semibold text-gray-400'>{item.address}</p>
                                         </div>
-                                        <a class=" group/edit group-hover/item:visible invisible" href="#">
-                                            <span class="group-hover/edit:text-gray-200 flex items-center justify-around bg-gradient-to-r from-green-600 to-lime-500 p-2 rounded-md text-gray-50 mt-2 shadow-md">Explore Project <BsArrowRightCircle color='white'/></span>
-                                        </a>
+                                        <Link className=" group/edit group-hover/item:visible invisible" href={`/projects/${item.id}`}>
+                                            <span className="group-hover/edit:text-gray-200 flex items-center justify-around bg-gradient-to-r from-green-600 to-lime-500 p-2 rounded-md text-gray-50 mt-2 shadow-md">Explore Project <BsArrowRightCircle color='white'/></span>
+                                        </Link>
                                     </div>
                             )
                         }
