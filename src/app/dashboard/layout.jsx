@@ -11,7 +11,7 @@ export default function DashboardLayout({ children }) {
       <div className=" flex">
         <div className=" w-48 bg-white border-r-[1px] rounded-md">
           <ul className="menu w-full rounded-box pb-60">
-            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2">
+            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
               <Link href='/dashboard/profile'>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ export default function DashboardLayout({ children }) {
                 Profile
               </Link>
             </li>
-            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2">
+            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@ export default function DashboardLayout({ children }) {
                 History
               </a>
             </li>
-            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2">
+            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

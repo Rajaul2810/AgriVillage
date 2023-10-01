@@ -14,6 +14,7 @@ import { MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import Link from "next/link";
 import Image from "next/image";
 import logo from '../../../public/assets/girl2.jpg'
+import log from '../../../public/logo.png'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,7 +71,7 @@ export const Navbar = () => {
             </div>
 
             <div className=" flex items-center ms-10 max-md:ms-0">
-              <h1>Logo</h1>
+              <Image className=" rounded-full bg-white" src={log} alt="logo" height={70} width={80}/>
             </div>
             <div className=" hidden md:block">
               <div className=" flex justify-center items-center gap-5 h-16 text-gray-500">

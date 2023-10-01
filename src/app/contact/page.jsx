@@ -51,7 +51,7 @@ const Contact = () => {
                                 <label htmlFor="">Message</label><br />
                                 <textarea className=' bg-green-200 p-3  w-full rounded-md' type="text" name='message' placeholder='Enter message' rows={2} />
                             </div>
-                            <input className=' bg-gradient-to-r from-green-600 to-lime-500 border-none shadow-green-500/50 shadow-lg py-3 px-4 w-40  rounded-3xl text-white font-bold transform hover:scale-105 duration-150 cursor-pointer' type="button" value='SEND' />
+                            <input className='btn bg-gradient-to-r from-green-600 to-lime-500 border-none shadow-green-500/50 shadow-lg py-3 px-4 w-40  rounded-3xl text-white font-bold transform hover:scale-105 duration-150 cursor-pointer' type="button" value='SEND' />
                         </form>
                     </div>
                 </div>

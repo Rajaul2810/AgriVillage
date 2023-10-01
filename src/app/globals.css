@@ -2,8 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,6 +25,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    overflow-x: hidden;
 }
 .footer_bg{
   background-image: url(../../public/assets/WorldMap.svg);
