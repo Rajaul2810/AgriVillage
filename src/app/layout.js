@@ -1,10 +1,10 @@
 import Footer from './Components/Footer'
 import { Navbar } from './Components/Navbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter,Covered_By_Your_Grace } from 'next/font/google'
 
 const inter = Inter({
-  subsets: ['latin'],
+  subsets:['latin']
 })
 export const metadata = {
   title: 'AgriVillage',

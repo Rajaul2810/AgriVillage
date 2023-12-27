@@ -37,6 +37,10 @@ const Footer = () => {
                             <BsFillCheckCircleFill color='green' />
                             <p className=''>Visit</p>
                         </div>
+                        <div className='flex gap-1 items-center cursor-pointer  hover:translate-x-2 duration-300'>
+                            <BsFillCheckCircleFill color='green' />
+                            <p className=''>Event</p>
+                        </div>
                     </div>
                     <div className='m-5'>
                         <h1 className=' text-sm font-bold '>ESSENTIAL PAGE</h1>

@@ -14,21 +14,21 @@ const Contact = () => {
                         <p className=' text-3xl font-extrabold  text-black'>Contact us</p>
 
                         <p className=' text-md pb-5 pt-2'>Send us a note and we will be in touch shortly.</p>
-                        <div className=' mb-2 flex p-3 shadow-lg me-1 rounded-lg'>
+                        <div className=' mb-2 flex p-3 shadow-lg me-1 rounded-lg bg-white'>
                             <p className=' bg-gradient-to-r from-green-600 to-lime-500 p-3 w-10 h-10 rounded-full  shadow-indigo-500/50 shadow-md'><FiMapPin color='white' /></p>
                             <div className=' ms-5 text-gray-500'>
                                 <p className=' font-bold text-black'>Our Address:</p>
                                 <p className=' text-sm'>Jagannath University, Dhaka 1100</p>
                             </div>
                         </div>
-                        <div className='mb-2 flex p-3 shadow-lg me-1 rounded-lg'>
+                        <div className='mb-2 flex p-3 shadow-lg me-1 rounded-lg bg-white'>
                             <p className=' bg-gradient-to-r from-green-600 to-lime-500 p-3 w-10 h-10 rounded-full shadow-indigo-500/50 shadow-md'><FiMail color='white' /></p>
                             <div className=' ms-5 text-gray-500'>
                                 <p className=' font-bold text-black'>Our Mailbox:</p>
                                 <p className=' text-sm'>rajaulkarim2810@gmail.com</p>
                             </div>
                         </div>
-                        <div className=' mb-2 flex p-3 shadow-lg me-1 rounded-lg'>
+                        <div className=' mb-2 flex p-3 shadow-lg me-1 rounded-lg bg-white'>
                             <p className=' bg-gradient-to-r from-green-600 to-lime-500 p-3 w-10 h-10 rounded-full shadow-indigo-500/50 shadow-md'><FiPhone color='white' /></p>
                             <div className='ms-5 text-gray-500'>
                                 <p className=' font-bold text-black'>Our Phone:</p>
