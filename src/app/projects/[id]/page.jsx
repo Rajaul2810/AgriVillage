@@ -11,7 +11,7 @@ import {
 
 import img1 from "../../../../public/assets/girl.jpg";
 import Image from "next/image";
-import { projects } from "../../projects/page.jsx";
+import { projects } from "@/app/libs/Data.js";
 
 const imgs = [
   {
@@ -57,7 +57,7 @@ const Details = ({ params }) => {
   return (
     <section className=" bg-slate-100">
       <section>
-        <div className="page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat">
+        <div className="page_banner h-56 relative grid place-content-end bg-cover bg-center bg-no-repeat">
           <p className=" text-white text-2xl font-semibold pt-5 blur-none">
             Project Details
           </p>

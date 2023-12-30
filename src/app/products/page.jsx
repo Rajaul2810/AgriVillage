@@ -1,54 +1,12 @@
-"use client";
+
 import Image from "next/image";
 import React from "react";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { TbCurrencyTaka } from "react-icons/tb";
-import banana from "../../../public/assets/banana.jpg";
-import papaya from "../../../public/assets/papaya.jpg";
-import malta from "../../../public/assets/malta.jpg";
-import pomegranate from "../../../public/assets/pomegranate.jpg";
-import watermelon from "../../../public/assets/watermelon.jpg";
-import strawberries from "../../../public/assets/strawberries.jpg";
+import { products } from "../libs/Data.js";
 import productIcon from "../../../public/assets/head/productIcon.png";
+import Link from "next/link";
 
-const products = [
-  {
-    id: 1,
-    name: "তরমুজ",
-    price: "130.00",
-    photo: watermelon,
-  },
-  {
-    id: 2,
-    name: "আনার",
-    price: "230.00",
-    photo: pomegranate,
-  },
-  {
-    id: 3,
-    name: "কলা",
-    price: "130.00",
-    photo: banana,
-  },
-  {
-    id: 4,
-    name: "স্ট্রবেরি",
-    price: "150.00",
-    photo: strawberries,
-  },
-  {
-    id: 5,
-    name: "মালটা",
-    price: "130.00",
-    photo: malta,
-  },
-  {
-    id: 6,
-    name: "পেপে",
-    price: "180.00",
-    photo: papaya,
-  },
-];
 
 const Products = () => {
   return (
@@ -66,7 +24,7 @@ const Products = () => {
         <div className=" flex justify-center mt-12">
           <div className=" gap-4 w-11/12 md:w-3/4 sm:w-full  grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
             {products.map((item) => (
-              <div
+              <Link href={`/products/${item.id}`}
                 key={item.id}
                 className="items-center p-3 shadow-md  rounded-lg bg-white hover:shadow-lg transform hover:scale-105 duration-500"
               >
@@ -91,7 +49,7 @@ const Products = () => {
                   <TbCurrencyTaka size={15} />
                   <p className=" text-xs font-semibold">{item.price}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

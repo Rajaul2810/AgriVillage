@@ -35,4 +35,6 @@ body {
 }
 .page_banner{
   background-image: url(../../public/assets/village.jpg);
+  background-position: center;
+  background-size: cover;
 }

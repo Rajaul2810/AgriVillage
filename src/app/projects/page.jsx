@@ -1,34 +1,12 @@
-"use client";
+
 import Image from "next/image";
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import vill from "../../../public/assets/head.jpg";
-import sorisa from "../../../public/assets/sorisa.jpg";
-import sun from "../../../public/assets/sunflower.jpg";
+import { projects } from "../libs/Data.js";
 import projectIcon from "../../../public/assets/head/projectIcon.png";
 import { BsArrowRightCircle } from "react-icons/bs";
 import Link from "next/link";
 
-const projects = [
-  {
-    id: 1,
-    name: "AgriVillage",
-    address: "Noupara, Mymensingh",
-    photo: vill,
-  },
-  {
-    id: 2,
-    name: "Sorisha Vari",
-    address: "Savar, Dhaka",
-    photo: sorisa,
-  },
-  {
-    id: 3,
-    name: "Golapgram",
-    address: "Savar, Dhaka",
-    photo: sun,
-  },
-];
 
 const Projects = () => {
   return (
@@ -89,4 +67,4 @@ const Projects = () => {
 };
 
 export default Projects;
-export { projects };
+
