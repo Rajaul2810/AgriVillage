@@ -7,6 +7,8 @@ import {
   FiPackage,
   FiUsers,
   FiStar,
+  FiArrowDownRight,
+  FiArrowUpRight,
 } from "react-icons/fi";
 
 import img1 from "../../../../public/assets/girl.jpg";
@@ -363,11 +365,25 @@ const information = (params) => {
   return (
     <div className=" p-5">
       <div className=" flex justify-center">
-        <div className=" w-11/12 md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-5">
-          <Image src={project.photo} alt="" className=" h-96 w-full" />
+        <div className=" w-11/12 md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-5 place-items-center">
+          <Image src={project.photo} alt="" className=" h-96 w-full rounded-md" />
           <div>
-            <h1 className=" text-lg font-bold">Project Name: {project.name}</h1>
-            <p>Location: {project.address}</p>
+            <h1 className=" text-2xl font-bold"> {project.name}</h1>
+            <p> {project.address}</p>
+            <p className=" py-3">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
+              tenetur suscipit obcaecati. Mollitia provident, cupiditate
+              voluptates suscipit sit quasi quam.
+            </p>
+            <p className=" py-2">Entry Fee: <span className=" font-bold">100 tk</span> per Person</p>
+            <p className=" py-2">Discount: <span className=" font-bold">20% </span>for all Family Package </p>
+            <button className="btn bg-gradient-to-r from-green-400 to-lime-300 my-5">Booking Now <FiArrowUpRight/></button>
+          </div>
+          <div>
+            <p>b</p>
+          </div>
+          <div>
+            <b>b</b>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FiCloud, FiGrid, FiList, FiSettings } from "react-icons/fi";
 
 export default function DashboardLayout({ children }) {
   return (
@@ -11,8 +12,14 @@ export default function DashboardLayout({ children }) {
       <div className=" flex">
         <div className=" w-48 bg-white border-r-[1px] rounded-md">
           <ul className="menu w-full rounded-box pb-60">
-            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-              <Link href='/dashboard/profile'>
+            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+              <Link href="/dashboard">
+                <FiGrid/>
+                Dashboard
+              </Link>
+            </li>
+            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+              <Link href="/dashboard/profile">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -30,7 +37,7 @@ export default function DashboardLayout({ children }) {
                 Profile
               </Link>
             </li>
-            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -49,8 +56,8 @@ export default function DashboardLayout({ children }) {
                 History
               </a>
             </li>
-            <li className=" bg-slate-50 rounded-md shadow-sm mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-              <a>
+            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+              <Link href="/dashboard/orderList">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -66,11 +73,29 @@ export default function DashboardLayout({ children }) {
                   />
                 </svg>
                 Order List
-              </a>
+              </Link>
+            </li>
+            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+                <Link href="/dashboard/projectList" >
+                  <FiList/>
+                  Project List
+                </Link>
+            </li>
+            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+                <Link href="/dashboard/productList" >
+                  <FiList/>
+                  Product List
+                </Link>
+            </li>
+            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+                <Link href="/dashboard/eventList" >
+                  <FiList/>
+                  Event List
+                </Link>
             </li>
           </ul>
         </div>
-        <main className=" ml-10 w-full"> {children}</main>
+        <main className="w-full my-5 mx-10"> {children}</main>
       </div>
     </section>
   );

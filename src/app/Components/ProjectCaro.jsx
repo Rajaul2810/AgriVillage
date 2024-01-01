@@ -37,7 +37,7 @@ const ProjectCaro = () => {
         <Image src={projectIcon} alt="pro" height={100} width={100}/>
       </div>
       <h1 className=" text-center text-4xl font-extrabold">
-      আমাদের প্রজেক্ট সমূহ
+      পপুলার <span className="text-green-500">প্রজেক্ট</span> সমূহ
       </h1>
         <div className="carousel ">
           {projects.map((item) => (
