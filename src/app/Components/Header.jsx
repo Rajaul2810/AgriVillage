@@ -5,7 +5,7 @@ import { BsArrowRightCircle } from 'react-icons/bs'
 
 const Header = () => {
   return (
-    <section className='h-screen w-full relative  grid place-content-center bg-cover bg-center head_bg'>
+    <section className='h-screen w-full grid place-content-center bg-cover bg-center head_bg'>
       <div className="">
         <div className=' '>
           <h1 className=' text-yellow-600 text-5xl font-extrabold'>Agriculture Pure</h1>

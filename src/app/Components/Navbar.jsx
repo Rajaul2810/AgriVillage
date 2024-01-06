@@ -50,7 +50,7 @@ export const Navbar = () => {
         </section>
       </div>
 
-      <section className="">
+      <section className=" ">
         <div className="flex justify-center items-center">
           <nav className=" flex justify-between w-full lg:w-3/4 md:w-full rounded-b-3xl rounded-t-2xl bg-white shadow-md h-16 me-2 ms-2 ">
             {/* mobile */}
