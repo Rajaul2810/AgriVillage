@@ -104,8 +104,8 @@ export const Navbar = () => {
                  প্রোডাক্ট
                 </Link>
                 <Link
-                  activeclass="event"
-                  href="/event"
+                  activeclass="events"
+                  href="/events"
                   className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
                 >
                   ইভেন্ট
@@ -235,8 +235,8 @@ export const Navbar = () => {
               প্রোডাক্ট
             </Link>
             <Link
-              activeclass="/event"
-              href="/about"
+              activeclass="/events"
+              href="/abouts"
               className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
             >
               ইভেন্ট
