@@ -2,33 +2,12 @@
 import Image from "next/image";
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import vill from "../../../public/assets/head.jpg";
-import sorisa from "../../../public/assets/sorisa.jpg";
-import sun from "../../../public/assets/sunflower.jpg";
 import projectIcon from "../../../public/assets/head/projectIcon.png";
 import { BsArrowRightCircle } from "react-icons/bs";
 import Link from "next/link";
+import { projects } from "../libs/Data";
 
-const projects = [
-  {
-    id: 1,
-    name: "AgriVillage",
-    address: "Noupara, Mymensingh",
-    photo: vill,
-  },
-  {
-    id: 2,
-    name: "Sorisha Vari",
-    address: "Savar, Dhaka",
-    photo: sorisa,
-  },
-  {
-    id: 3,
-    name: "Golapgram",
-    address: "Savar, Dhaka",
-    photo: sun,
-  },
-];
+
 
 const ProjectCaro = () => {
   return (
@@ -41,7 +20,7 @@ const ProjectCaro = () => {
       </h1>
         <div className="carousel ">
           {projects.map((item) => (
-            <div
+            <Link href={`/projects/${item.id}`}
               className="carousel-item m-2 p-5 w-3/4 md:w-2/6 h-96"
               key={item.id}
             >
@@ -66,7 +45,7 @@ const ProjectCaro = () => {
                 </div>
               </div>
                 
-            </div>
+            </Link>
           ))}
         </div>
       <p className=" flex justify-center pt-5">
