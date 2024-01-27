@@ -7,6 +7,7 @@ import { events } from "@/app/libs/Data";
 import EventBenefits from "../../Components/EventBenefit";
 import { BsFillCaretRightFill } from "react-icons/bs";
 import qa from "../../../../public/assets/qa.jpg";
+import { toast } from "react-toastify";
 
 const EventDetails = ({ params }) => {
   const [count, setCount] = useState(1);
@@ -105,7 +106,7 @@ const EventDetails = ({ params }) => {
                 readOnly
               />
               <br />
-              <button className="btn bg-gradient-to-r from-green-400 to-lime-300 my-1">
+              <button onClick={()=>toast("Order Successfull")} className="btn bg-gradient-to-r from-green-400 to-lime-300 my-1">
                 Payment <FiArrowUpRight />
               </button>
             </div>

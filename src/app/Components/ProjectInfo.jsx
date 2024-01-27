@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -7,6 +7,7 @@ import { projects } from "../libs/Data";
 import ProjectBenefits from "./ProjectBenefits";
 import { BsFillCaretRightFill } from "react-icons/bs";
 import qa from "../../../public/assets/qa.jpg";
+import { toast } from "react-toastify";
 
 const ProjectInfo = ({ params }) => {
   const [count, setCount] = useState(1);
@@ -14,6 +15,7 @@ const ProjectInfo = ({ params }) => {
     setCount(1);
   }
   const project = projects.find((pd) => pd.id == params.id);
+
   return (
     <section>
       <div className=" p-5 pt-10">
@@ -102,8 +104,11 @@ const ProjectInfo = ({ params }) => {
                 readOnly
               />
               <br />
-              <button className="btn bg-gradient-to-r from-green-400 to-lime-300 my-1">
-                Payment <FiArrowUpRight />
+              <button
+                onClick={() => toast("Order Successfull")}
+                className="btn bg-gradient-to-r from-green-400 to-lime-300 my-1"
+              >
+                Place Order <FiArrowUpRight />
               </button>
             </div>
             <div className="modal-action">

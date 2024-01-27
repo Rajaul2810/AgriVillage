@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { products } from "@/app/libs/Data.js";
 import Image from "next/image";
 import {
@@ -14,6 +14,8 @@ import {
 
 import qa from "../../../../public/assets/qa.jpg";
 import { BsFillCaretRightFill } from "react-icons/bs";
+import { StoreContext } from "@/app/context";
+import { toast } from "react-toastify";
 
 const ProductDtails = ({ params }) => {
   const [change, setChange] = useState(1);
@@ -22,7 +24,14 @@ const ProductDtails = ({ params }) => {
     setChange(1);
   }
 
+  const {cartData , setCartData} = useContext(StoreContext)
   const product = products.find((pd) => pd.id == params.id);
+  const handleCart = (product)=>{
+    const newData = {product}
+     setCartData([...cartData,newData])
+     toast("Add to card Successfully")
+    //  console.log(cartData)
+  }
   return (
     <section className=" bg-slate-100 ">
       <div className="page_banner h-56 relative grid place-content-end bg-cover bg-center bg-no-repeat ">
@@ -63,8 +72,7 @@ const ProductDtails = ({ params }) => {
                 <TbPlus size={20} />
               </button>
             </div>
-            <button className="btn bg-gradient-to-r from-green-500 to-lime-400 my-5">
-              {" "}
+            <button onClick={()=> handleCart(product)} className="btn bg-gradient-to-r from-green-500 to-lime-400 my-5">
               Add to Cart <TbShoppingCart />
             </button>
           </div>
