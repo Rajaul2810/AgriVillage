@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { FiStar } from "react-icons/fi";
 
-const ProjectReview = ({reviews}) => {
+const ProjectReview = ({ reviews }) => {
   return (
     <div>
       <div className=" flex justify-center pt-10 pb-10">
@@ -38,54 +38,39 @@ const ProjectReview = ({reviews}) => {
           </div>
           <div className=" shadow-sm p-3 h-fit bg-white rounded-md">
             <div>
-              <p>Name</p>
-              <input
-                type="text"
-                placeholder="Name"
-                className="input input-bordered input-primary w-full max-w-xs"
-              />
-            </div>
-            <div>
-              <p>Email</p>
-              <input
-                type="text"
-                placeholder="Email"
-                className="input input-bordered input-primary w-full max-w-xs"
-              />
-            </div>
-            <div>
               <p>Message</p>
               <textarea
                 className="textarea textarea-primary w-full max-w-xs"
                 placeholder="message"
               ></textarea>
             </div>
-            <div className="rating">
+            <div className="rating gap-1">
               <input
                 type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
+                name="rating-3"
+                className="mask mask-heart bg-red-400"
               />
               <input
                 type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
+                name="rating-3"
+                className="mask mask-heart bg-orange-400"
+                
+              />
+              <input
+                type="radio"
+                name="rating-3"
+                className="mask mask-heart bg-yellow-400"
+              />
+              <input
+                type="radio"
+                name="rating-3"
+                className="mask mask-heart bg-lime-400"
+              />
+              <input
+                type="radio"
+                name="rating-3"
+                className="mask mask-heart bg-green-400"
                 checked
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange-400"
               />
             </div>
             <button className="btn bg-yellow-300 block mt-5">Submit</button>
