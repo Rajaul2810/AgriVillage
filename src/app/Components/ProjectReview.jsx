@@ -6,8 +6,7 @@ const ProjectReview = ({ reviews }) => {
   return (
     <div>
       <div className=" flex justify-center pt-10 pb-10">
-        <div className=" w-11/12 gap-5 grid grid-cols-1 md:grid-cols-3">
-          <div className=" gap-3 grid grid-cols-1 md:grid-cols-2 col-span-2 ">
+        <div className=" w-11/12 gap-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             {reviews.map((review) => (
               <div
                 key={review.id}
@@ -36,7 +35,7 @@ const ProjectReview = ({ reviews }) => {
               </div>
             ))}
           </div>
-          <div className=" shadow-sm p-3 h-fit bg-white rounded-md">
+          {/* <div className=" shadow-sm p-3 h-fit bg-white rounded-md">
             <div>
               <p>Message</p>
               <textarea
@@ -74,8 +73,7 @@ const ProjectReview = ({ reviews }) => {
               />
             </div>
             <button className="btn bg-yellow-300 block mt-5">Submit</button>
-          </div>
-        </div>
+          </div> */}
       </div>
     </div>
   );

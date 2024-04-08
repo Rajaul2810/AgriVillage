@@ -12,7 +12,7 @@ const CartPage = () => {
         <p className=" text-white text-2xl font-semibold pt-5">Cart PAGE</p>
       </div>
       <div>
-        <div className="overflow-x-auto m-10 bg-white shadow-sm rounded-md">
+        <div className="overflow-x-auto m-5 md:m-10 bg-white shadow-sm rounded-md">
           <table className="table">
             {/* head */}
             <thead>

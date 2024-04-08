@@ -1,22 +1,23 @@
-import React from 'react'
+import React from "react";
+import pf from "../../../../public/assets/girl.jpg";
+import Image from "next/image";
+import { FiEdit3 } from "react-icons/fi";
 
-const items = new Array(144).fill(0)
 const Profile = () => {
-  
   return (
-    <div>
-      <div className=' h-64 w-64 bg-black mt-3 p-1'>
-            <ul className=' grid grid-cols-12 gap-1 place-content-center place-items-center'>
-              {
-                items.map((item, index)=>
-                <li key={index} className={`h-4 w-4 ${index%2!=0 ? 'bg-black':'bg-white'} `}></li>
-                )
-              }
-              
-            </ul>
+    <div className=" flex justify-center">
+      <div className=" bg-white p-5 rounded-md shadow-sm">
+        <div className=" relative flex justify-center">
+          <Image src={pf} alt="profile" className=" rounded-full w-40 h-40 " />
+           <span className=" btn btn-circle absolute bottom-0 ms-10 -mb-5"><FiEdit3/></span>
+        </div>
+        <div className="my-10">
+          <input type="text" value="Rajaul Karim" disabled className=" border p-3 rounded-md mb-2" /> <br />
+          <input type="text" value="rajaulkarim2810@gmail.com" disabled className=" border p-3 rounded-md"/>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

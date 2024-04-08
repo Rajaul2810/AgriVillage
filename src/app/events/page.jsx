@@ -33,9 +33,9 @@ const Events = () => {
                 className="  items-center p-3 shadow-md rounded-md bg-white h-fit"
               >
                 <div className="">
-                  <div className=" w-fit p-2 bg-yellow-400 -ms-6 -mt-6 rounded-sm shadow-lg mb-5">
-                    <h1 className=" font-bold ">{item.name}</h1>
-                    <div className=" flex  gap-2 ">
+                  <div className=" w-full p-2 bg-yellow-400  rounded-sm shadow-lg mb-5 rounded-b-2xl">
+                    <h1 className=" font-bold text-center ">{item.name}</h1>
+                    <div className=" flex  gap-2 justify-center">
                       <FaMapMarkerAlt size={15} />
                       <p className=" text-xs font-semibold">{item.address}</p>
                     </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiCloud, FiGrid, FiList, FiSettings } from "react-icons/fi";
+import { FiBookmark, FiCloud, FiGrid, FiHexagon, FiList, FiSettings } from "react-icons/fi";
 
 export default function DashboardLayout({ children }) {
   return (
@@ -14,7 +14,7 @@ export default function DashboardLayout({ children }) {
           <ul className="menu w-full rounded-box pb-60">
             <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
               <Link href="/dashboard">
-                <FiGrid/>
+                <FiGrid />
                 Dashboard
               </Link>
             </li>
@@ -75,27 +75,42 @@ export default function DashboardLayout({ children }) {
                 Order List
               </Link>
             </li>
-            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-                <Link href="/dashboard/projectList" >
-                  <FiList/>
-                  Project List
-                </Link>
+            <li>
+              <details>
+                <summary className=" border rounded-md shadow-md mt-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+                  <FiSettings /> Manage
+                </summary>
+                <p
+                  className=" overflow-hidden transition-all duration-500 ease-in-out transform origin-top" x-show="open"
+                >
+                  <Link
+                    href="/dashboard/projectList"
+                    className=" flex items-center gap-2 p-2 border rounded-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300 "
+                  >
+                    <FiHexagon />
+                    Project List
+                  </Link>
+                  <Link
+                    href="/dashboard/productList"
+                    className=" flex items-center gap-2 p-2 border rounded-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300"
+                  >
+                    <FiList />
+                    Product List
+                  </Link>
+                  <Link
+                    href="/dashboard/eventList"
+                    className=" flex items-center gap-2 p-2 border rounded-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300"
+                  >
+                    <FiBookmark />
+                    Event List
+                  </Link>
+                </p>
+              </details>
             </li>
-            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-                <Link href="/dashboard/productList" >
-                  <FiList/>
-                  Product List
-                </Link>
-            </li>
-            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-                <Link href="/dashboard/eventList" >
-                  <FiList/>
-                  Event List
-                </Link>
-            </li>
+            
           </ul>
         </div>
-        <main className="w-full my-5 mx-10"> {children}</main>
+        <main className="w-full my-5 mx-2 overflow-x-auto"> {children}</main>
       </div>
     </section>
   );
