@@ -22,7 +22,7 @@ module.exports = {
   dasyui: {
     themes: ["light", "dark"],
     darkTheme: "dark",
-    base: true,
+    base: false,
     utils: false,
   },
 }

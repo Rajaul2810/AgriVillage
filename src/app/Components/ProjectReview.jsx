@@ -10,7 +10,7 @@ const ProjectReview = ({ reviews }) => {
             {reviews.map((review) => (
               <div
                 key={review.id}
-                className=" shadow-sm rounded-md p-3 bg-white h-fit"
+                className=" shadow-sm rounded-md p-3 bg-white h-fit text-black"
               >
                 <p className=" text-xs text-justify pb-2">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas

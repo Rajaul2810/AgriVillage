@@ -13,7 +13,7 @@ const FeatureProducts = () => {
         <div className=" flex justify-center">
           <Image src={productIcon} alt="pro" height={100} width={100} />
         </div>
-        <h1 className=" text-center text-4xl font-extrabold">
+        <h1 className=" text-center text-4xl font-extrabold text-black">
           অর্গানিক <span className=" text-green-500">পপুলার </span> প্রোডাক্ট
         </h1>
         <div className=" flex justify-center mt-12">
@@ -40,7 +40,7 @@ const FeatureProducts = () => {
                   width={400}
                 />
                 <hr className=" text-gray-300 mt-2" />
-                <h1 className=" font-bold pt-5">{item.name}</h1>
+                <h1 className=" font-bold pt-5 text-black">{item.name}</h1>
                 <div className=" flex items-center text-gray-600">
                   <TbCurrencyTaka size={15} />
                   <p className=" text-xs font-semibold">{item.price}</p>

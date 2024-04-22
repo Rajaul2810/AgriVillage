@@ -131,7 +131,7 @@ export const Navbar = () => {
               </div> */}
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle">
-                  <div className="indicator">
+                  <div className="indicator text-black">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"
@@ -154,7 +154,7 @@ export const Navbar = () => {
                   className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
                 >
                   <div className="card-body">
-                    <span className="font-bold text-lg">{cartData.length} Items</span>
+                    <span className="font-bold text-lg text-black">{cartData.length} Items</span>
                     <div className="card-actions">
                       <Link href="/cartPage" className="btn bg-gradient-to-r from-green-600 to-lime-400 text-white  btn-block">
                         View cart
@@ -171,7 +171,7 @@ export const Navbar = () => {
               >
                 Login
               </Link> */}
-              <div className="dropdown dropdown-end">
+              <div className="dropdown dropdown-end text-black ">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
                     <Image src={logo} alt="logo" />
@@ -179,7 +179,7 @@ export const Navbar = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                  className="mt-3 z-[1] p-2  menu menu-sm dropdown-content bg-base-100 w-52 rounded-md shadow-xl"
                 >
                   <li>
                     <Link

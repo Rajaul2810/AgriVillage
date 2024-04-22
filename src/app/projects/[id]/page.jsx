@@ -68,7 +68,7 @@ const Details = ({ params }) => {
             Project Details
           </p>
         </div>
-        <div className="">
+        <div className=" text-black">
           <div className=" flex justify-center">
             <ul className=" menu menu-horizontal bg-white shadow-md rounded-box">
               <li onClick={() => setChange("info")}>

@@ -11,7 +11,7 @@ const QA = () => {
       <div className=" flex justify-center">
         <Image src={qaicon} alt="qa" height={100} width={100}/>
       </div>
-      <p className=" text-center text-3xl font-bold pt-2">
+      <p className=" text-center text-3xl font-bold pt-2 text-black">
       সচরাচর জানতে চাওয়া প্রশ্নের উত্তর
       </p>
       <div className=" flex justify-center items-center p-5 ">
@@ -27,7 +27,7 @@ const QA = () => {
                   {question}
                 </div>
                 <div className="collapse-content bg-white ">
-                  <p className=" text-sm pt-2">
+                  <p className=" text-sm pt-2 text-black">
                     {answer}
                   </p>
                 </div>

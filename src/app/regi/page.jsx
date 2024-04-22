@@ -34,9 +34,9 @@ const Registration = () => {
                 <p className=' text-white text-2xl font-semibold pt-5 blur-none'>Registration</p>
             </div>
 
-            <section className='bg-lime-50'>
-                <div className=' flex justify-center'>
-                    <div className=' md:w-2/6 p-5 pe-10 ps-10 bg-base-100 shadow-xl mt-5 mb-5 rounded-md'>
+            <section className='bg-lime-50 text-black'>
+                <div className=' flex justify-center items-center'>
+                    <div className=' w-11/12 md:w-2/6 p-5 pe-10 ps-10 bg-base-100 shadow-xl mt-5 mb-5 rounded-md'>
                         <div>
                             <h1 className=' font-bold text-xl text-center'>Registration</h1>
                             <div className=' '>

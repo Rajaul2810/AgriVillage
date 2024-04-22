@@ -19,7 +19,7 @@ const Welcome = () => {
                         <p className=' text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 bg-lime-400 '>Welcome to AgriVillage Website</p>
                         <p className=' text-3xl font-extrabold text-black'>Welcome To Organic <br />Agriculture Market</p>
                         <p className=' text-gray-600 text-xs pt-4 pb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum earum necessitatibus reiciendis distinctio blanditiis aperiam minima dolore, sed numquam animi.</p>
-                        <div>
+                        <div className=' text-black'>
                             <div className=' flex shadow-xl rounded-md p-2 w-3/4 md:w-2/4 bg-white mb-2'>
                                 <p><BsFillCheckCircleFill color='green' /></p>
                                 <p className=' text-xs ms-2'>Best Tourism Place</p>

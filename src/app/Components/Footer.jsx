@@ -5,7 +5,7 @@ import { BsFacebook, BsFillCheckCircleFill, BsLinkedin, BsYoutube } from 'react-
 const Footer = () => {
     return (
         <section className='h-full bg-contain bg-center footer_bg'>
-            <div className=" h-auto flex justify-center pt-5">
+            <div className=" h-auto flex justify-center pt-5 text-black">
                 <div className=' w-3/4 bg-slate-100 bg-opacity-95  rounded-sm grid sm:grid-cols-2 md:grid-cols-3 '>
                     <div className='m-5'>
                         <h1 className=' text-lg font-extrabold'>AgriVillage</h1>

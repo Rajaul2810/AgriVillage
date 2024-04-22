@@ -24,7 +24,7 @@ const Projects = () => {
             width={100}
           />
         </div>
-        <h1 className=" text-center text-4xl font-extrabold">
+        <h1 className=" text-center text-4xl font-extrabold text-black">
           আমাদের <span className=" text-green-500">প্রজেক্ট</span> সমূহ
         </h1>
         <div className=" flex justify-center  px-4 sm:px-4 md:px-12 mt-12">
@@ -40,7 +40,7 @@ const Projects = () => {
                     src={item.photo}
                     alt="h"
                   />
-                  <div className=" w-fit p-2 rounded-e-full absolute top-0 border bg-white m-1">
+                  <div className=" w-fit p-2 rounded-e-full absolute top-0 border bg-white m-1 text-black">
                     <h1 className=" font-bold ">{item.name}</h1>
                     <div className=" flex  gap-2 ">
                       <FaMapMarkerAlt size={15} />

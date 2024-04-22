@@ -30,8 +30,8 @@ const ProjectInfo = ({ params }) => {
               <span className="text-2xl font-bold before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-green-500 relative inline-block">
                 <span className="relative text-white">{project.name}</span>
               </span>
-              <p className="py-2"> {project.address}</p>
-              <p className=" py-3">{project.description}</p>
+              <p className="py-2 text-black"> {project.address}</p>
+              <p className=" py-3 text-black">{project.description}</p>
               <div className=" flex items-center text-green-600 py-2">
                 <TbCurrencyTaka size={25} />
                 <p className=" text-lg font-semibold">100</p>
@@ -40,7 +40,7 @@ const ProjectInfo = ({ params }) => {
                 <button onClick={() => setCount(count - 1)} className="btn">
                   <TbMinus size={20} />
                 </button>
-                <p className=" font-bold text-lg">{count}</p>
+                <p className=" font-bold text-lg text-black">{count}</p>
                 <button onClick={() => setCount(count + 1)} className="btn ">
                   <TbPlus size={20} />
                 </button>
@@ -72,7 +72,7 @@ const ProjectInfo = ({ params }) => {
           </div>
         </div>
         {/* Open the modal using document.getElementById('ID').showModal() method */}
-        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle text-black">
           <div className="modal-box">
             <h3 className="font-bold text-lg">Booking Information</h3>
             <div className="py-4">

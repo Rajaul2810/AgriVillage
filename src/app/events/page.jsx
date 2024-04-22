@@ -12,7 +12,7 @@ const Events = () => {
       <div className="page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat ">
         <p className=" text-white text-2xl font-semibold pt-5">Event PAGE</p>
       </div>
-      <div className="pt-8 pb-12 bg-green-50">
+      <div className="pt-8 pb-12 bg-green-50 text-black">
         <div className=" flex justify-center ">
           <Image
             src={projectIcon}

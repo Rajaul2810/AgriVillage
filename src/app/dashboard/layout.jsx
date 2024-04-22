@@ -1,7 +1,62 @@
+"use client"
 import Link from "next/link";
-import { FiBookmark, FiCloud, FiGrid, FiHexagon, FiList, FiSettings } from "react-icons/fi";
+import { useState } from "react";
+import {
+  FiBookmark,
+  FiGrid,
+  FiInfo,
+  FiList,
+  FiLock,
+  FiUser,
+} from "react-icons/fi";
 
 export default function DashboardLayout({ children }) {
+  const [open, setOpen] = useState(false)
+  const dashboardUserRoutes = [
+    {
+      title: "Profile",
+      route: "/dashboard/profile",
+      icon: <FiUser/>,
+    },
+    {
+      title: "History",
+      route: "/dashboard/history",
+      icon: <FiInfo/>,
+    },
+    {
+      title: "Order List",
+      route: "/dashboard/orderList",
+      icon: <FiList/>,
+    },
+    {
+      title: "Show Password",
+      route: "/dashboard/password",
+      icon: <FiLock/>,
+    },
+  ];
+  const dashboardFormOwnerRoutes = [
+    {
+      title: "Profile",
+      route: "/dashboard/profile",
+      icon: <FiUser/>,
+    },
+    {
+      title: "History",
+      route: "/dashboard/history",
+      icon: <FiInfo/>,
+    },
+    {
+      title: "Order List",
+      route: "/dashboard/orderList",
+      icon: <FiList/>,
+    },
+    {
+      title: "Show Password",
+      route: "/dashboard/password",
+      icon: <FiLock/>,
+    },
+  ];
+
   return (
     <section>
       <div className="page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat">
@@ -9,108 +64,23 @@ export default function DashboardLayout({ children }) {
           Dashboard
         </p>
       </div>
-      <div className=" flex">
-        <div className=" w-48 bg-white border-r-[1px] rounded-md">
-          <ul className="menu w-full rounded-box pb-60">
-            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-              <Link href="/dashboard">
-                <FiGrid />
-                Dashboard
-              </Link>
-            </li>
-            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-              <Link href="/dashboard/profile">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  />
-                </svg>
-                Profile
-              </Link>
-            </li>
-            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                History
-              </a>
-            </li>
-            <li className=" border rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-              <Link href="/dashboard/orderList">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  />
-                </svg>
-                Order List
-              </Link>
-            </li>
-            <li>
-              <details>
-                <summary className=" border rounded-md shadow-md mt-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
-                  <FiSettings /> Manage
-                </summary>
-                <p
-                  className=" overflow-hidden transition-all duration-500 ease-in-out transform origin-top" x-show="open"
-                >
-                  <Link
-                    href="/dashboard/projectList"
-                    className=" flex items-center gap-2 p-2 border rounded-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300 "
-                  >
-                    <FiHexagon />
-                    Project List
-                  </Link>
-                  <Link
-                    href="/dashboard/productList"
-                    className=" flex items-center gap-2 p-2 border rounded-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300"
-                  >
-                    <FiList />
-                    Product List
-                  </Link>
-                  <Link
-                    href="/dashboard/eventList"
-                    className=" flex items-center gap-2 p-2 border rounded-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300"
-                  >
-                    <FiBookmark />
-                    Event List
-                  </Link>
-                </p>
-              </details>
-            </li>
-            
+      <div className=" flex bg-slate-100">
+        <div className={`${open? 'w-60': 'w-24'}  bg-white border-r-[1px] rounded-md text-black shadow-lg `} >
+           <div onClick={()=>setOpen(!open)} className=" bg-slate-200 shadow-md rounded-md p-2 w-fit w- h-fit my-5 m-auto hover:text-green-500 cursor-pointer"><p><FiGrid/></p></div>
+          <ul className="menu w-full rounded-box pb-60 grid place-content-center">
+            {dashboardUserRoutes.map((item, idx) => (
+              <li key={idx} className=" border w-full rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+                <Link href={item.route} className={`${!open && 'tooltip tooltip-right'}`} data-tip={item.title}>
+                   {item.icon}
+                   {open && <span>{item.title}</span>} 
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
-        <main className="w-full my-5 mx-2 overflow-x-auto"> {children}</main>
+        <main className=" w-full my-5 mx-5 overflow-x-scroll bg-slate-100">
+          {children}
+        </main>
       </div>
     </section>
   );

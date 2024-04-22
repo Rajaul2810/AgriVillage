@@ -15,7 +15,7 @@ const ProjectCaro = () => {
       <div className=" flex justify-center">
         <Image src={projectIcon} alt="pro" height={100} width={100}/>
       </div>
-      <h1 className=" text-center text-4xl font-extrabold">
+      <h1 className=" text-center text-4xl font-extrabold text-black">
       পপুলার <span className="text-green-500">প্রজেক্ট</span> সমূহ
       </h1>
         <div className="carousel ">

@@ -3,7 +3,7 @@ import React from "react";
 const ProjectPlan = () => {
   return (
     <div>
-      <ul className="timeline timeline-vertical my-10">
+      <ul className="timeline timeline-vertical my-10 text-black">
         <li>
           <div className="timeline-start timeline-box rounded-md shadow-lg">
             <p className=" bg-yellow-400 -mt-6 p-1 rounded-sm shadow-lg w-fit mb-3 font-bold">
