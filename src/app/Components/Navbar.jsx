@@ -54,9 +54,9 @@ export const Navbar = () => {
 
       <section className=" ">
         <div className="flex justify-center items-center">
-          <nav className=" flex justify-between w-full lg:w-3/4 md:w-full rounded-b-3xl rounded-t-2xl bg-white shadow-md h-16 me-2 ms-2 ">
+          <nav className=" flex justify-between w-full lg:w-3/4 md:w-full md:rounded-b-3xl md:rounded-t-2xl bg-white shadow-md h-16 me-2 ms-2 ">
             {/* mobile */}
-            <div className="ms-10 flex justify-evenly items-center md:hidden">
+            <div className="sm:ms-10 flex justify-evenly items-center md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 aria-controls="mobile-menu"
@@ -86,43 +86,50 @@ export const Navbar = () => {
                   <Link
                     activeclass="home"
                     href="/"
-                    className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+                    className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
                   >
-                    হোম
+                    Home
                   </Link>
                 </p>
                 <Link
                   activeclass="projects"
                   href="/projects"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
                 >
-                  প্রজেক্ট
+                  Projects
                 </Link>
                 <Link
                   activeclass="products"
                   href="/products"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
                 >
-                 প্রোডাক্ট
+                  Products
                 </Link>
                 <Link
                   activeclass="events"
                   href="/events"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
                 >
-                  ইভেন্ট
+                  Events
+                </Link>
+                <Link
+                  activeclass="training"
+                  href="/training"
+                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
+                >
+                  Training
                 </Link>
                 <Link
                   activeclass="contact"
                   href="/contact"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
                 >
-                  যোগাযোগ
+                  Contact
                 </Link>
               </div>
             </div>
 
-            <div className=" flex justify-between items-center me-10">
+            <div className=" flex justify-between items-center sm:me-10">
               {/* <div className="indicator me-10">
                 <span className="indicator-item badge badge-secondary">2</span>
                 <p className=" bg-gradient-to-r from-green-500 to-lime-400 rounded-full p-2">
@@ -216,38 +223,45 @@ export const Navbar = () => {
               <Link
                 activeclass="/"
                 href="/"
-                className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+                className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
               >
-                হোম
+                Home
               </Link>
             </p>
             <Link
               activeclass="/projects"
               href="/projects"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white"
             >
-              প্রজেক্ট
+              Projects
             </Link>
             <Link
               activeclass="/products"
               href="/products"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
             >
-              প্রোডাক্ট
+              Products
             </Link>
             <Link
               activeclass="/events"
               href="/events"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
             >
-              ইভেন্ট
+              Events
+            </Link>
+            <Link
+              activeclass="/contact"
+              href="/training"
+              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
+            >
+              Training
             </Link>
             <Link
               activeclass="/contact"
               href="/contact"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white font-semibold "
+              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
             >
-              যোগাযোগ
+              Contact
             </Link>
           </div>
         )}

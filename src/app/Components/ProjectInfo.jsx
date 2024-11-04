@@ -49,7 +49,7 @@ const ProjectInfo = ({ params }) => {
                 onClick={() =>
                   document.getElementById("my_modal_5").showModal()
                 }
-                className="btn bg-gradient-to-r from-green-400 to-lime-300 my-5"
+                className="btn bg-gradient-to-r rounded-sm from-green-400 to-lime-300 my-5"
               >
                 Booking Now <FiArrowUpRight />
               </button>

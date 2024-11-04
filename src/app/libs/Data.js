@@ -113,37 +113,37 @@ const eventBenefits = [
 const products = [
   {
     id: 1,
-    name: "তরমুজ",
+    name: "Watermelon",
     price: "130.00",
     photo: watermelon,
   },
   {
     id: 2,
-    name: "আনার",
+    name: "Pomegranate",
     price: "230.00",
     photo: pomegranate,
   },
   {
     id: 3,
-    name: "কলা",
+    name: "Banana",
     price: "130.00",
     photo: banana,
   },
   {
     id: 4,
-    name: "স্ট্রবেরি",
+    name: "Strawberries",
     price: "150.00",
     photo: strawberries,
   },
   {
     id: 5,
-    name: "মালটা",
+    name: "Orange",
     price: "130.00",
     photo: malta,
   },
   {
     id: 6,
-    name: "পেপে",
+    name: "Papaya",
     price: "180.00",
     photo: papaya,
   },

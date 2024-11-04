@@ -22,15 +22,15 @@ const Events = () => {
             width={100}
           />
         </div>
-        <h1 className=" text-center text-4xl font-extrabold">
-          আমাদের <span className=" text-green-500">ইভেন্ট</span> সমূহ
+        <h1 className=" text-center text-3xl font-extrabold">
+          Our <span className=" text-green-500">Events</span>
         </h1>
         <div className=" flex justify-center my-10">
-          <div className=" gap-5 w-11/12 md:w-10/12  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className=" gap-5 w-11/12 md:w-8/12  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
             {events.map((item) => (
               <div
                 key={item.id}
-                className="  items-center p-3 shadow-md rounded-md bg-white h-fit"
+                className="  items-center p-3 shadow-sm rounded-sm bg-white h-fit border"
               >
                 <div className="">
                   <div className=" w-full p-2 bg-yellow-400  rounded-sm shadow-lg mb-5 rounded-b-2xl">
@@ -41,15 +41,15 @@ const Events = () => {
                     </div>
                   </div>
                   <Image
-                    className=" rounded-lg place-self-center h-56 w-full "
+                    className=" rounded-sm place-self-center h-40 w-full "
                     src={item.photo}
                     alt="h"
                   />
-                  <p className=" text-justify py-5 text-sm">{item.description}</p>
+                  <p className=" text-justify py-5 text-sm">{item.description.slice(0,100)}</p>
                 </div>
 
                 <Link
-                  className="btn rounded-md mt-2 shadow-sm border w-full bg-gradient-to-r from-green-500 to-lime-500"
+                  className="btn rounded-sm mt-2 shadow-sm border w-full bg-gradient-to-r from-green-500 to-lime-500"
                   href={`/events/${item.id}`}
                 >
                   <span className=" flex justify-center gap-5 items-center p-2 ">

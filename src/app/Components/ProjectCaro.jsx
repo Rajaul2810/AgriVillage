@@ -11,17 +11,17 @@ import { projects } from "../libs/Data";
 
 const ProjectCaro = () => {
   return (
-    <section className="bg-white pt-10 pb-10 min-h-screen">
+    <section className="bg-white pt-10 pb-10">
       <div className=" flex justify-center">
         <Image src={projectIcon} alt="pro" height={100} width={100}/>
       </div>
       <h1 className=" text-center text-4xl font-extrabold text-black">
-      পপুলার <span className="text-green-500">প্রজেক্ট</span> সমূহ
+      Popular <span className="text-green-500">Projects</span>
       </h1>
         <div className="carousel ">
           {projects.map((item) => (
             <Link href={`/projects/${item.id}`}
-              className="carousel-item m-2 p-5 w-3/4 md:w-2/6 h-96"
+              className="carousel-item m-2 p-2 w-3/4 md:w-2/6 h-80"
               key={item.id}
             >
               <div className=" relative group/item items-center shadow-xl rounded-md transform hover:scale-105 duration-500 w-full h-full">
@@ -51,7 +51,7 @@ const ProjectCaro = () => {
       <p className=" flex justify-center pt-5">
         <Link
           href="/projects"
-          className=" bg-yellow-400 py-2 px-5 rounded-full shadow-lg text-xs text-black  transform hover:scale-105 duration-500 flex items-center gap-1"
+          className=" bg-yellow-400 py-2 px-5 rounded-sm shadow-lg text-xs text-black  transform hover:scale-105 duration-500 flex items-center gap-1"
         >
           More View <BsArrowRightCircle />
         </Link>

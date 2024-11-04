@@ -72,8 +72,8 @@ const ProductDtails = ({ params }) => {
                 <TbPlus size={20} />
               </button>
             </div>
-            <button onClick={()=> handleCart(product)} className="btn bg-gradient-to-r from-green-500 to-lime-400 my-5">
-              Add to Cart <TbShoppingCart />
+            <button onClick={()=> handleCart(product)} className="btn rounded-sm bg-gradient-to-r from-green-500 to-lime-400 my-5">
+              Add to Cart <TbShoppingCart size={24}/>
             </button>
           </div>
         </div>
@@ -85,7 +85,7 @@ const ProductDtails = ({ params }) => {
             <div className=" flex gap-5">
               <button
                 onClick={() => setTaggle("des")}
-                className={`btn bg-white rounded-2xl ${
+                className={`btn bg-white rounded-sm ${
                   taggle == "des"
                     ? "bg-gradient-to-r from-green-500 to-lime-400"
                     : ""
@@ -96,7 +96,7 @@ const ProductDtails = ({ params }) => {
               </button>
               <button
                 onClick={() => setTaggle("comm")}
-                className={`btn bg-white rounded-2xl ${
+                className={`btn bg-white rounded-sm ${
                   taggle == "comm"
                     ? "bg-gradient-to-r from-green-500 to-lime-400"
                     : ""

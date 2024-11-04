@@ -19,7 +19,7 @@ const Products = () => {
           <Image src={productIcon} alt="pro" height={100} width={100} />
         </div>
         <h1 className=" text-center text-4xl font-extrabold">
-        অর্গানিক <span className=" text-green-500">প্রোডাক্ট</span>
+        Organic <span className=" text-green-500">Products</span>
         </h1>
         <div className=" flex justify-center mt-12">
           <div className=" gap-4 w-11/12 md:w-3/4 sm:w-full  grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4">

@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import React from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
@@ -6,7 +5,6 @@ import { projects } from "../libs/Data.js";
 import projectIcon from "../../../public/assets/head/projectIcon.png";
 import { BsArrowRightCircle } from "react-icons/bs";
 import Link from "next/link";
-
 
 const Projects = () => {
   return (
@@ -25,32 +23,32 @@ const Projects = () => {
           />
         </div>
         <h1 className=" text-center text-4xl font-extrabold text-black">
-          আমাদের <span className=" text-green-500">প্রজেক্ট</span> সমূহ
+          Our <span className=" text-green-500">Projects</span>
         </h1>
         <div className=" flex justify-center  px-4 sm:px-4 md:px-12 mt-12">
-          <div className=" gap-4 w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className=" w-11/12 md:w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {projects.map((item) => (
               <div
                 key={item.id}
-                className="  items-center p-3 shadow-md rounded-md bg-white border-b-4 border-green-400"
+                className="  items-center p-3 shadow-sm rounded-sm bg-white border"
               >
-                <div className="relative">
+                <div className="">
                   <Image
-                    className=" rounded-lg place-self-center h-96 w-full "
+                    className=" rounded-sm place-self-center h-40 w-full "
                     src={item.photo}
                     alt="h"
                   />
-                  <div className=" w-fit p-2 rounded-e-full absolute top-0 border bg-white m-1 text-black">
-                    <h1 className=" font-bold ">{item.name}</h1>
-                    <div className=" flex  gap-2 ">
-                      <FaMapMarkerAlt size={15} />
-                      <p className=" text-xs font-semibold">{item.address}</p>
+                  <div className=" w-fit p-2 m-1 text-black">
+                    <div className=" flex  gap-2 bg-green-100 rounded-sm p-1 my-2">
+                      <FaMapMarkerAlt size={15} color="green" />
+                      <p className=" text-xs">{item.address}</p>
                     </div>
+                    <h1 className=" font-bold text-center ">{item.name}</h1>
                   </div>
                 </div>
 
                 <Link
-                  className="btn rounded-md mt-2 shadow-sm border bg-white w-full hover:bg-lime-400"
+                  className="btn rounded-sm mt-2 shadow-sm border bg-white w-full hover:bg-lime-400"
                   href={`/projects/${item.id}`}
                 >
                   <span className=" flex justify-center gap-5 items-center p-2 ">
@@ -67,4 +65,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

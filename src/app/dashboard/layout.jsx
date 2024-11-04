@@ -65,11 +65,11 @@ export default function DashboardLayout({ children }) {
         </p>
       </div>
       <div className=" flex bg-slate-100">
-        <div className={`${open? 'w-60': 'w-24'}  bg-white border-r-[1px] rounded-md text-black shadow-lg `} >
-           <div onClick={()=>setOpen(!open)} className=" bg-slate-200 shadow-md rounded-md p-2 w-fit w- h-fit my-5 m-auto hover:text-green-500 cursor-pointer"><p><FiGrid/></p></div>
+        <div className={`${open? 'w-60': 'w-24'}  bg-white border-r-[1px] rounded-sm text-black shadow-lg `} >
+           <div onClick={()=>setOpen(!open)} className=" bg-slate-200 shadow-sm rounded-sm p-2 w-fit w- h-fit my-5 m-auto hover:text-green-500 cursor-pointer"><p><FiGrid/></p></div>
           <ul className="menu w-full rounded-box pb-60 grid place-content-center">
             {dashboardUserRoutes.map((item, idx) => (
-              <li key={idx} className=" border w-full rounded-md shadow-md mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
+              <li key={idx} className=" border w-full rounded-sm shadow-sm mt-2 mb-2 hover:bg-gradient-to-r from-green-300 to-lime-300">
                 <Link href={item.route} className={`${!open && 'tooltip tooltip-right'}`} data-tip={item.title}>
                    {item.icon}
                    {open && <span>{item.title}</span>} 
