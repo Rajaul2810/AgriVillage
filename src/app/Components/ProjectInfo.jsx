@@ -8,6 +8,8 @@ import ProjectBenefits from "./ProjectBenefits";
 import { BsFillCaretRightFill } from "react-icons/bs";
 import qa from "../../../public/assets/qa.jpg";
 import { toast } from "react-toastify";
+import TourPackage from "./TourPackage";
+
 
 const ProjectInfo = ({ params }) => {
   const [count, setCount] = useState(1);
@@ -54,6 +56,7 @@ const ProjectInfo = ({ params }) => {
                 Booking Now <FiArrowUpRight />
               </button>
             </div>
+            
             <div className="py-10">
               <ProjectBenefits />
             </div>

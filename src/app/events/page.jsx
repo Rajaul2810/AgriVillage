@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaClock, FaCalendarAlt, FaPhoneAlt } from "react-icons/fa";
+import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { events } from "../libs/Data.js";
 import projectIcon from "../../../public/assets/head/projectIcon.png";
 import { BsArrowRightCircle } from "react-icons/bs";
@@ -9,53 +10,87 @@ import Link from "next/link";
 const Events = () => {
   return (
     <section>
-      <div className="page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat ">
-        <p className=" text-white text-2xl font-semibold pt-5">Event PAGE</p>
+      <div className="page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat">
+        <p className="text-white text-2xl font-semibold pt-5">EVENT PAGE</p>
       </div>
-      <div className="pt-8 pb-12 bg-green-50 text-black">
-        <div className=" flex justify-center ">
+      <div className="pt-8 pb-12 bg-gradient-to-b from-green-50 to-white">
+        <div className="flex justify-center">
           <Image
             src={projectIcon}
             alt="pro"
-            className=" drop-shadow-md"
+            className="drop-shadow-md animate-bounce hover:scale-110 transition-transform"
             height={100}
             width={100}
           />
         </div>
-        <h1 className=" text-center text-3xl font-extrabold">
-          Our <span className=" text-green-500">Events</span>
+        <h1 className="text-center text-4xl font-extrabold text-gray-800 mb-4">
+          Our <span className="text-green-600 bg-green-100 px-2 rounded">Events</span>
         </h1>
-        <div className=" flex justify-center my-10">
-          <div className=" gap-5 w-11/12 md:w-8/12  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+        <p className="text-center text-gray-600 max-w-2xl mx-auto px-4 mb-10">
+          Join us for exciting agricultural festivals and cultural celebrations throughout the year
+        </p>
+
+        <div className="container md:w-11/12 mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((item) => (
               <div
                 key={item.id}
-                className="  items-center p-3 shadow-sm rounded-sm bg-white h-fit border"
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-dashed border-green-500"
               >
-                <div className="">
-                  <div className=" w-full p-2 bg-yellow-400  rounded-sm shadow-lg mb-5 rounded-b-2xl">
-                    <h1 className=" font-bold text-center ">{item.name}</h1>
-                    <div className=" flex  gap-2 justify-center">
-                      <FaMapMarkerAlt size={15} />
-                      <p className=" text-xs font-semibold">{item.address}</p>
+                <div className="relative">
+                  <Image
+                    className="h-64 w-full object-cover hover:scale-105 transition-transform duration-300"
+                    src={item.photo}
+                    alt={item.name}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h2 className="text-2xl font-bold mb-2">{item.name}</h2>
+                    <div className="flex items-center gap-2">
+                      <FaMapMarkerAlt className="text-green-400" />
+                      <span className="text-sm">{item.address}</span>
                     </div>
                   </div>
-                  <Image
-                    className=" rounded-sm place-self-center h-40 w-full "
-                    src={item.photo}
-                    alt="h"
-                  />
-                  <p className=" text-justify py-5 text-sm">{item.description.slice(0,100)}</p>
                 </div>
 
-                <Link
-                  className="btn rounded-sm mt-2 shadow-sm border w-full bg-gradient-to-r from-green-500 to-lime-500"
-                  href={`/events/${item.id}`}
-                >
-                  <span className=" flex justify-center gap-5 items-center p-2 ">
-                    Explore Event <BsArrowRightCircle />
-                  </span>
-                </Link>
+                <div className="p-6">
+                  <div className="space-y-3 mb-4">
+                    <div className="flex items-center gap-3 text-gray-600">
+                      <FaCalendarAlt className="text-green-500" />
+                      <span>{item.date}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-600">
+                      <FaClock className="text-green-500" />
+                      <span>{item.time}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-600">
+                      <FaPhoneAlt className="text-green-500" />
+                      <span>{item.contact}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-gray-600 mb-4 line-clamp-3">{item.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {item.facilities?.slice(0, 3).map((facility, index) => (
+                      <span
+                        key={index}
+                        className="bg-green-100 text-green-600 text-xs px-3 py-1 rounded-full flex items-center gap-1 hover:bg-green-200 transition-colors"
+                      >
+                        <MdOutlineMiscellaneousServices />
+                        {facility}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link
+                    href={`/events/${item.id}`}
+                    className="flex w-full text-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-3 rounded-lg transition-all duration-300 items-center justify-center gap-2 transform hover:scale-105"
+                  >
+                    Explore Event
+                    <BsArrowRightCircle className="animate-pulse" />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
