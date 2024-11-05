@@ -3,7 +3,7 @@ import Header from "./Components/Header";
 import ProjectCaro from "./Components/ProjectCaro";
 import QA from "./Components/QA";
 import Welcome from "./Components/Welcome";
-
+import Workshop from "./Components/Workshop";
 
 export default function Home() {
   return (
@@ -12,6 +12,7 @@ export default function Home() {
     <Welcome />
     <ProjectCaro/>
     <FeatureProducts/>
+    <Workshop/>
     <QA/>
    </>
   )
