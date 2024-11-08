@@ -17,9 +17,6 @@ const EventDetails = ({ params }) => {
   const event = events.find((pd) => pd.id == params.id);
   return (
     <section>
-      <div className="page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat ">
-        <p className=" text-white text-2xl font-semibold pt-5">Event PAGE</p>
-      </div>
       <div className=" p-5 pt-10 bg-slate-100 text-black">
         <div className=" flex justify-center">
           <div className=" w-11/12 md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-5 place-items-center py-5">

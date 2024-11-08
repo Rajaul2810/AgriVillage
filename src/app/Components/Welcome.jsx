@@ -9,7 +9,7 @@ import Link from 'next/link'
 const Welcome = () => {
     return (
         <section className='bg-gradient-to-b from-green-50 to-white'>
-            <div className='container mx-auto md:w-10/12 px-4 py-12 md:py-20'>
+            <div className='container mx-auto md:w-10/12 px-4 py-4 md:py-10'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center'>
                     {/* Image Grid with SVG Decorations */}
                     <div className='relative grid grid-cols-6 grid-rows-5 gap-3 md:gap-4 h-[400px] md:h-[500px] lg:h-[600px] order-2 lg:order-1'>
@@ -67,7 +67,7 @@ const Welcome = () => {
                             <span className='inline-block px-4 py-2 rounded-full bg-green-100 text-green-600 font-semibold text-sm mb-4 transform hover:scale-105 transition-transform'>
                                 Welcome to AgriVillage
                             </span>
-                            <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-4 md:mb-6'>
+                            <h1 className='text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 leading-tight mb-4 md:mb-6'>
                                 Experience Organic{' '}
                                 <span className='text-green-600 relative inline-block'>
                                     Agriculture & Tourism
@@ -110,7 +110,7 @@ const Welcome = () => {
                                 href='/projects' 
                                 className='group px-6 py-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-gray-800 rounded-sm font-semibold flex items-center gap-2 hover:shadow-lg transform hover:scale-105 transition-all duration-300'
                             >
-                                Book Farm Visit
+                                Farm Visit
                                 <BsArrowRightCircle className='group-hover:translate-x-1 transition-transform'/>
                             </Link>
                         </div>

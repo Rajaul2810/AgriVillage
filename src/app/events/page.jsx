@@ -10,9 +10,6 @@ import Link from "next/link";
 const Events = () => {
   return (
     <section>
-      <div className="page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat">
-        <p className="text-white text-2xl font-semibold pt-5">EVENT PAGE</p>
-      </div>
       <div className="pt-8 pb-12 bg-gradient-to-b from-green-50 to-white">
         <div className="flex justify-center">
           <Image

@@ -11,9 +11,6 @@ import Link from "next/link";
 const Products = () => {
   return (
     <section>
-      <div className="page_banner h-40 relative grid place-content-end bg-cover bg-center bg-no-repeat">
-        <p className=" text-white text-2xl font-bold pt-5">PRODUCT PAGE</p>
-      </div>
       <div className="pt-12 pb-12 bg-gray-50">
         <div className=" flex justify-center">
           <Image src={productIcon} alt="pro" height={100} width={100} />

@@ -99,7 +99,7 @@ const TourPackage = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="w-full md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {packages.map((pkg) => (
             <div 
               key={pkg.id}
@@ -126,7 +126,7 @@ const TourPackage = () => {
                 </ul>
 
                 <Link 
-                  href="/booking"
+                  href="#"
                   className="mt-6 block w-full py-3 px-6 text-center text-white rounded-lg transition-colors duration-300 bg-green-500 hover:bg-green-600"
                 >
                   Book Now

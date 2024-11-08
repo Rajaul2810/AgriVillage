@@ -1,16 +1,8 @@
 "use client";
 import React, { useContext, useState } from "react";
-import {
-  BsBagDash,
-  BsTelephoneFill,
-  BsYoutube,
-  BsFacebook,
-  BsLinkedin,
-  BsMenuButtonWideFill,
-  BsFillBackspaceFill,
-} from "react-icons/bs";
+import { HiMenu, HiX } from "react-icons/hi";
 import { CiHome, CiLogout, CiUser } from "react-icons/ci";
-import { MdLocationOn, MdOutlineEmail } from "react-icons/md";
+import { FiShoppingBag } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../public/assets/girl2.jpg";
@@ -19,253 +11,127 @@ import { StoreContext } from "../context";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const {cartData } = useContext(StoreContext)
+  const { cartData } = useContext(StoreContext);
+
   return (
-    <section className=" pt-2 pb-2 absolute z-10 w-full">
-      <div className=" hidden md:block">
-        <section className=" flex justify-center ">
-          <div className="w-full md:w-full md:me-5 md:ms-5 sm:me-5 sm:ms-5 max-sm:ms-7 max-sm:me-7 max-sm:ps-4 md:ps-5  gap-1 grid grid-cols-2 md:grid-cols-4 lg:w-3/5  bg-gradient-to-r from-green-600 to-lime-400 rounded-t-2xl md:rounded-t-full text-white p-1">
-            <div className=" flex items-center">
-              <MdOutlineEmail />
-              <p className=" text-xs">agrivillage@gmail.com</p>
-            </div>
-            <div className="flex items-center">
-              <MdLocationOn />
-              <p className=" text-xs">Jagannath University</p>
-            </div>
-            <div className="flex items-center">
-              <BsTelephoneFill />
-              <p className=" text-xs">+8801776030787</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <a href="">
-                <BsYoutube size={15} />
-              </a>
-              <a href="">
-                <BsFacebook size={15} />
-              </a>
-              <a href="">
-                <BsLinkedin size={15} />
-              </a>
-            </div>
+    <header className="sticky top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200">
+      <nav className="container mx-auto px-4 py-3">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Image
+              src={log}
+              alt="logo"
+              width={70}
+              height={70}
+              className="transition-transform hover:scale-105"
+            />
           </div>
-        </section>
-      </div>
 
-      <section className=" ">
-        <div className="flex justify-center items-center">
-          <nav className=" flex justify-between w-full lg:w-3/4 md:w-full md:rounded-b-3xl md:rounded-t-2xl bg-white shadow-md h-16 me-2 ms-2 ">
-            {/* mobile */}
-            <div className="sm:ms-10 flex justify-evenly items-center md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                aria-controls="mobile-menu"
-                aria-expanded="false"
-                className=" text-black p-2"
-              >
-                {!isOpen ? (
-                  <BsMenuButtonWideFill size={20} />
-                ) : (
-                  <BsFillBackspaceFill size={20} />
-                )}
-              </button>
-            </div>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <NavLink href="/" text="Home" />
+            <NavLink href="/projects" text="Projects" />
+            <NavLink href="/products" text="Products" />
+            <NavLink href="/events" text="Events" />
+            <NavLink href="/training" text="Training" />
+            <NavLink href="/contact" text="Contact" />
+          </div>
 
-            <div className=" flex items-center ms-10 max-md:ms-0">
-              <Image
-                className=" rounded-full bg-white"
-                src={log}
-                alt="logo"
-                height={70}
-                width={80}
-              />
-            </div>
-            <div className=" hidden md:block">
-              <div className=" flex justify-center items-center gap-5 h-16 text-gray-500">
-                <p>
-                  <Link
-                    activeclass="home"
-                    href="/"
-                    className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
+          {/* Right Section */}
+          <div className="flex items-center space-x-4">
+            {/* Cart Dropdown */}
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle">
+                <div className="indicator">
+                  <FiShoppingBag className="h-6 w-6 text-gray-700" />
+                  {cartData.length > 0 && (
+                    <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-emerald-500 text-white text-xs flex items-center justify-center">
+                      {cartData.length}
+                    </span>
+                  )}
+                </div>
+              </label>
+              <div tabIndex={0} className="dropdown-content z-[1] mt-3 w-60 p-4 bg-white rounded-lg shadow-xl border border-gray-100">
+                <div className="text-center">
+                  <p className="font-medium text-gray-800">{cartData.length} Items</p>
+                  <Link 
+                    href="/cartPage" 
+                    className="mt-3 block w-full py-2 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-300"
                   >
-                    Home
+                    View Cart
                   </Link>
-                </p>
-                <Link
-                  activeclass="projects"
-                  href="/projects"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-                >
-                  Projects
-                </Link>
-                <Link
-                  activeclass="products"
-                  href="/products"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-                >
-                  Products
-                </Link>
-                <Link
-                  activeclass="events"
-                  href="/events"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-                >
-                  Events
-                </Link>
-                <Link
-                  activeclass="training"
-                  href="/training"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-                >
-                  Training
-                </Link>
-                <Link
-                  activeclass="contact"
-                  href="/contact"
-                  className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-
-            <div className=" flex justify-between items-center sm:me-10">
-              {/* <div className="indicator me-10">
-                <span className="indicator-item badge badge-secondary">2</span>
-                <p className=" bg-gradient-to-r from-green-500 to-lime-400 rounded-full p-2">
-                  <BsBagDash color="white" />
-                </p>
-              </div> */}
-              <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="btn btn-ghost btn-circle">
-                  <div className="indicator text-black">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                      />
-                    </svg>
-                    <span className="badge badge-sm indicator-item">{cartData.length}</span>
-                  </div>
-                </label>
-                <div
-                  tabIndex={0}
-                  className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
-                >
-                  <div className="card-body">
-                    <span className="font-bold text-lg text-black">{cartData.length} Items</span>
-                    <div className="card-actions">
-                      <Link href="/cartPage" className="btn bg-gradient-to-r from-green-600 to-lime-400 text-white  btn-block">
-                        View cart
-                      </Link>
-                    </div>
-                  </div>
                 </div>
               </div>
-
-              {/* <button className=' bg-gradient-to-r from-green-600 to-lime-400  p-2 text-white transform hover:scale-105 duration-500 animate-pulse'>Login <BsArrowRightShort /></button> */}
-              {/* <Link
-                href="/login"
-                className=" cursor-pointer bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md text-white hover:text-white/50 font-semibold "
-              >
-                Login
-              </Link> */}
-              <div className="dropdown dropdown-end text-black ">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full">
-                    <Image src={logo} alt="logo" />
-                  </div>
-                </label>
-                <ul
-                  tabIndex={0}
-                  className="mt-3 z-[1] p-2  menu menu-sm dropdown-content bg-base-100 w-52 rounded-md shadow-xl"
-                >
-                  <li>
-                    <Link
-                      href="/dashboard/profile"
-                      className="flex items-center gap-2"
-                    >
-                      <CiUser /> Profile
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/dashboard"
-                      className=" flex items-center gap-2"
-                    >
-                      <CiHome />
-                      Dashboard
-                    </Link>
-                  </li>
-                  <hr className="mt-2 pb-2" />
-                  <li>
-                    <a className=" flex items-center gap-2">
-                      <CiLogout />
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </div>
-          </nav>
-        </div>
-        {isOpen && (
-          <div className="flex flex-col md:hidden justify-center items-center gap-1 p-2 bg-white rounded-lg m-2 text-gray-500">
-            <p>
-              <Link
-                activeclass="/"
-                href="/"
-                className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-              >
-                Home
-              </Link>
-            </p>
-            <Link
-              activeclass="/projects"
-              href="/projects"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white"
+
+            {/* User Dropdown */}
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-emerald-500 ring-offset-2">
+                  <Image src={logo} alt="user" className="object-cover" />
+                </div>
+              </label>
+              <ul tabIndex={0} className="dropdown-content z-[1] mt-3 w-48 bg-white rounded-lg shadow-xl border border-gray-100">
+                <li>
+                  <Link href="/dashboard/profile" className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 gap-3">
+                    <CiUser className="text-xl" /> Profile
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/dashboard" className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 gap-3">
+                    <CiHome className="text-xl" /> Dashboard
+                  </Link>
+                </li>
+                <div className="border-t border-gray-100 my-1"></div>
+                <li>
+                  <button className="flex w-full items-center px-4 py-3 text-gray-700 hover:bg-gray-50 gap-3">
+                    <CiLogout className="text-xl" /> Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              Projects
-            </Link>
-            <Link
-              activeclass="/products"
-              href="/products"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-            >
-              Products
-            </Link>
-            <Link
-              activeclass="/events"
-              href="/events"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-            >
-              Events
-            </Link>
-            <Link
-              activeclass="/contact"
-              href="/training"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-            >
-              Training
-            </Link>
-            <Link
-              activeclass="/contact"
-              href="/contact"
-              className=" cursor-pointer hover:bg-gradient-to-r from-green-600 to-lime-400 p-2 rounded-md hover:text-white "
-            >
-              Contact
-            </Link>
+              {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
+            </button>
           </div>
-        )}
-      </section>
-    </section>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 invisible'}`}>
+          <div className="pt-4 pb-3 space-y-3">
+            <MobileNavLink href="/" text="Home" />
+            <MobileNavLink href="/projects" text="Projects" />
+            <MobileNavLink href="/products" text="Products" />
+            <MobileNavLink href="/events" text="Events" />
+            <MobileNavLink href="/training" text="Training" />
+            <MobileNavLink href="/contact" text="Contact" />
+          </div>
+        </div>
+      </nav>
+    </header>
   );
 };
+
+const NavLink = ({ href, text }) => (
+  <Link
+    href={href}
+    className="relative text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-0.5 before:bg-emerald-500 before:transition-all hover:before:w-full"
+  >
+    {text}
+  </Link>
+);
+
+const MobileNavLink = ({ href, text }) => (
+  <Link
+    href={href}
+    className="block px-4 py-2 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200"
+  >
+    {text}
+  </Link>
+);

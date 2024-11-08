@@ -34,11 +34,6 @@ const ProductDtails = ({ params }) => {
   }
   return (
     <section className=" bg-slate-100 ">
-      <div className="page_banner h-56 relative grid place-content-end bg-cover bg-center bg-no-repeat ">
-        <p className=" text-white text-2xl font-semibold pt-5">
-          Product Details page
-        </p>
-      </div>
       <div className=" flex justify-center py-10">
         <div className="w-11/12 md:w-3/4 grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>

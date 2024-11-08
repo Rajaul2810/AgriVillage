@@ -63,11 +63,6 @@ const Details = ({ params }) => {
   return (
     <section className=" bg-slate-100">
       <section>
-        <div className="page_banner h-56 relative grid place-content-end bg-cover bg-center bg-no-repeat">
-          <p className=" text-white text-2xl font-semibold pt-5 blur-none">
-            Project Details
-          </p>
-        </div>
         <div className=" text-black">
           <div className=" flex justify-center">
             <ul className=" menu menu-horizontal bg-white shadow-md rounded-box">
