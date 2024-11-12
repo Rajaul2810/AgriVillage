@@ -32,7 +32,7 @@ const Events = () => {
             {events.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-dashed border-green-500"
+                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="relative">
                   <Image
