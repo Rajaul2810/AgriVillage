@@ -1,4 +1,4 @@
-"use client"
+
 import Link from 'next/link'
 import React from 'react'
 import { BsArrowRightCircle } from 'react-icons/bs'

@@ -46,7 +46,7 @@ export default function DashboardLayout({ children }) {
     },
     {
       title: "Order History",
-      route: "/dashboard/history",
+      route: "/dashboard/orderHistory",
       icon: <FiTruck className="text-orange-500"/>,
     },
     {
@@ -74,7 +74,7 @@ export default function DashboardLayout({ children }) {
     },
     {
       title: "Products",
-      route: "/dashboard/products",
+      route: "/dashboard/productList",
       icon: <FiList className="text-green-500"/>,
     },
     {
@@ -144,7 +144,7 @@ export default function DashboardLayout({ children }) {
         </div>
       </header> */}
       <div className="flex bg-gray-50">
-        <div className={`${open ? 'w-64' : 'w-20'} transition-all duration-300 bg-white border-r border-gray-200 min-h-screen shadow-lg`}>
+        <div className={`${open ? ' w-52' : 'w-20'} transition-all duration-300 bg-white border-r border-gray-200 min-h-screen shadow-lg`}>
           <button 
             onClick={() => setOpen(!open)}
             className="bg-gray-100 hover:bg-gray-200 transition-colors p-3 rounded-lg mx-auto my-4 block hover:text-green-600"

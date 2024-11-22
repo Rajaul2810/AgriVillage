@@ -5,6 +5,7 @@ import QA from "./Components/QA";
 import Welcome from "./Components/Welcome";
 import Workshop from "./Components/Workshop";
 import TourPackage from "./Components/TourPackage";
+import MissionVision from "./Components/MissionVision";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
     <FeatureProducts/>
     <Workshop/>
     <QA/>
-   </>
+    <MissionVision/>
+    </>
   )
 }

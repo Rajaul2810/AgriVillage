@@ -47,7 +47,7 @@ const CartPage = () => {
                     <tr key={item?.product?.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4">
                         <Image
-                          className="rounded-lg w-16 h-16 object-cover"
+                          className="rounded-lg w-16 h-16 object-fill"
                           width={64}
                           height={64}
                           alt={item?.product?.name}
@@ -57,11 +57,7 @@ const CartPage = () => {
                       <td className="px-6 py-4 text-gray-800">{item?.product?.name}</td>
                       <td className="px-6 py-4 text-gray-800">৳{item?.product?.price}</td>
                       <td className="px-6 py-4">
-                        <div className="flex items-center space-x-2">
-                          <button className="px-2 py-1 border rounded">-</button>
-                          <span className="w-8 text-center">1</span>
-                          <button className="px-2 py-1 border rounded">+</button>
-                        </div>
+                        {item?.product?.quantity}
                       </td>
                       <td className="px-6 py-4">
                         <button 
