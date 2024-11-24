@@ -8,8 +8,12 @@ import Image from "next/image";
 import logo from "../../../public/assets/girl2.jpg";
 import log from "../../../public/logo.png";
 import { StoreContext } from "../context";
+import { useAuth } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 
 export const Navbar = () => {
+  const { userId } = useAuth();
+
   const [isOpen, setIsOpen] = useState(false);
   const { cartData } = useContext(StoreContext);
 
@@ -18,7 +22,7 @@ export const Navbar = () => {
       <nav className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image
               src={log}
               alt="logo"
@@ -26,7 +30,7 @@ export const Navbar = () => {
               height={70}
               className="transition-transform hover:scale-105"
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -52,11 +56,16 @@ export const Navbar = () => {
                   )}
                 </div>
               </label>
-              <div tabIndex={0} className="dropdown-content z-[1] mt-3 w-60 p-4 bg-white rounded-lg shadow-xl border border-gray-100">
+              <div
+                tabIndex={0}
+                className="dropdown-content z-[1] mt-3 w-60 p-4 bg-white rounded-lg shadow-xl border border-gray-100"
+              >
                 <div className="text-center">
-                  <p className="font-medium text-gray-800">{cartData.length} Items</p>
-                  <Link 
-                    href="/cartPage" 
+                  <p className="font-medium text-gray-800">
+                    {cartData.length} Items
+                  </p>
+                  <Link
+                    href="/cartPage"
                     className="mt-3 block w-full py-2 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-300"
                   >
                     View Cart
@@ -66,44 +75,40 @@ export const Navbar = () => {
             </div>
 
             {/* User Dropdown */}
-            <div className="dropdown dropdown-end">
-              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                <div className="w-10 h-10 rounded-full overflow-hidden ring-2 ring-emerald-500 ring-offset-2">
-                  <Image src={logo} alt="user" className="object-cover" />
-                </div>
-              </label>
-              <ul tabIndex={0} className="dropdown-content z-[1] mt-3 w-48 bg-white rounded-lg shadow-xl border border-gray-100">
-                <li>
-                  <Link href="/dashboard/profile" className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 gap-3">
-                    <CiUser className="text-xl" /> Profile
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/dashboard" className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-50 gap-3">
-                    <CiHome className="text-xl" /> Dashboard
-                  </Link>
-                </li>
-                <div className="border-t border-gray-100 my-1"></div>
-                <li>
-                  <button className="flex w-full items-center px-4 py-3 text-gray-700 hover:bg-gray-50 gap-3">
-                    <CiLogout className="text-xl" /> Logout
-                  </button>
-                </li>
-              </ul>
-            </div>
+            {userId ? (
+              <UserButton>
+                <UserButton.MenuItems>
+                  <UserButton.Link
+                    label="Dashboard"
+                    labelIcon={<CiHome />}
+                    href="/dashboard"
+                  />
+                </UserButton.MenuItems>
+              </UserButton>
+            ) : (
+              <Link href="/sign-in">Login</Link>
+            )}
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              {isOpen ? <HiX className="h-6 w-6" /> : <HiMenu className="h-6 w-6" />}
+              {isOpen ? (
+                <HiX className="h-6 w-6" />
+              ) : (
+                <HiMenu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 invisible'}`}>
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 invisible"
+          }`}
+        >
           <div className="pt-4 pb-3 space-y-3">
             <MobileNavLink href="/" text="Home" />
             <MobileNavLink href="/projects" text="Projects" />

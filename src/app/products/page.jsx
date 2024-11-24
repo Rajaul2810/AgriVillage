@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState, useContext } from "react";
 import { BsHeart, BsHeartFill } from "react-icons/bs";
 import { TbCurrencyTaka } from "react-icons/tb";
-import { GiPlantRoots, GiFruitBowl, GiCarrot } from "react-icons/gi";
+import { GiPlantRoots, GiFruitBowl, GiCarrot, GiFishing } from "react-icons/gi";
 import { FaTractor, FaUser, FaWeightHanging } from "react-icons/fa";
 import { products } from "../libs/Data.js";
 import productIcon from "../../../public/assets/head/productIcon.png";
@@ -27,6 +27,7 @@ const Products = () => {
       icon: <GiCarrot className="w-6 h-6" />,
     },
     { id: "Fruits", name: "Fruits", icon: <GiFruitBowl className="w-6 h-6" /> },
+    { id: "Fish", name: "Fish", icon: <GiFishing className="w-6 h-6" /> },
     {
       id: "Plants",
       name: "Plants",
@@ -96,9 +97,8 @@ const Products = () => {
         <div className="flex justify-center mt-8">
           <div className="gap-6 w-11/12 md:w-4/5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {filteredProducts.map((item) => (
-              <Link href={`/products/${item.id}`} key={item.id}>
-                <div className="group relative p-4 shadow-md rounded-xl bg-white hover:shadow-xl transform hover:scale-102 transition-all duration-300">
-                  <div className="flex justify-between items-center mb-3">
+              <div key={item.id} className="group relative p-4 shadow-md rounded-xl bg-white">
+                <div className="flex justify-between items-center mb-3">
                     <div className="flex gap-2">
                       <span className="bg-gradient-to-r from-green-600 to-lime-400 py-1 px-3 rounded-full text-white text-xs font-medium">
                         Fresh
@@ -172,9 +172,8 @@ const Products = () => {
                         Add to Cart
                       </button>
                     </div>
-                  </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

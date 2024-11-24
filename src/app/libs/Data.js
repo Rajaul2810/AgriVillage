@@ -259,6 +259,7 @@ const products = [
     farm: "Gazipur",
     owner: "Dulal Miya",
     photo: papaya,
+    isFeatured: true,
   },
   {
     id: 2,
@@ -270,6 +271,7 @@ const products = [
     farm: "Gazipur",
     owner: "Dulal Miya",
     photo: papaya,
+    isFeatured: true,
   },
   {
     id: 3,
@@ -281,6 +283,7 @@ const products = [
     farm: "Gazipur",
     owner: "Dulal Miya",
     photo: papaya,
+    isFeatured: true,
   },
   {
     id: 4,
@@ -292,6 +295,7 @@ const products = [
     farm: "Noakhali",
     owner: "Delwar Hossain Riyad",
     photo: watermelon,
+    isFeatured: false,
   },
   {
     id: 5,
@@ -303,6 +307,7 @@ const products = [
     farm: "Noakhali",
     owner: "Delwar Hossain Riyad",
     photo: watermelon,
+    isFeatured: false,
   },
   {
     id: 6,
@@ -314,6 +319,7 @@ const products = [
     farm: "Noakhali",
     owner: "Delwar Hossain Riyad",
     photo: watermelon,
+    isFeatured: false,
   },
   {
     id: 7,
@@ -325,6 +331,7 @@ const products = [
     farm: "Noakhali",
     owner: "Manzurul Karim",
     photo: banana,
+    isFeatured: false,
   },
   {
     id: 8,
@@ -336,6 +343,7 @@ const products = [
     farm: "Noakhali",
     owner: "Manzurul Karim",
     photo: banana,
+    isFeatured: false,
   },
   {
     id: 9,
@@ -347,6 +355,7 @@ const products = [
     farm: "Narsingdi",
     owner: "Mahtab Karim",
     photo: banana,
+    isFeatured: false,
   },
   {
     id: 10,
@@ -358,6 +367,7 @@ const products = [
     farm: "Narsingdi",
     owner: "Mahtab Karim",
     photo: banana,
+    isFeatured: true,
   },
   {
     id: 11,
@@ -369,6 +379,7 @@ const products = [
     farm: "Bagha, Rajshahi",
     owner: "KM Siddiqui",
     photo: malta,
+    isFeatured: false,
   },
   {
     id: 12,
@@ -380,6 +391,7 @@ const products = [
     farm: "Bagha, Rajshahi",
     owner: "KM Siddiqui",
     photo: malta,
+    isFeatured: false,
   },
   {
     id: 13,
@@ -391,6 +403,7 @@ const products = [
     farm: "Bagha, Rajshahi",
     owner: "KM Siddiqui",
     photo: malta,
+    isFeatured: false,
   },
   {
     id: 14,
@@ -402,6 +415,7 @@ const products = [
     farm: "Manikganj",
     owner: "Atikur Rahman",
     photo: vegetable,
+    isFeatured: true,
   },
   {
     id: 15,
@@ -413,6 +427,7 @@ const products = [
     farm: "Manikganj",
     owner: "Atikur Rahman",
     photo: vegetable1,
+    isFeatured: true,
   },
   {
     id: 16,
@@ -424,6 +439,7 @@ const products = [
     farm: "Manikganj",
     owner: "Atikur Rahman",
     photo: capsicum,
+    isFeatured: true,
   },
   {
     id: 17,
@@ -435,6 +451,7 @@ const products = [
     farm: "Manikganj",
     owner: "Atikur Rahman",
     photo: cauliflower,
+    isFeatured: false,
   },
   {
     id: 18,
@@ -446,6 +463,7 @@ const products = [
     farm: "Narsingdi",
     owner: "Mahtab Karim",
     photo: alu,
+    isFeatured: false,
   },
   {
     id: 19,
@@ -457,6 +475,7 @@ const products = [
     farm: "Narsingdi",
     owner: "Mahtab Karim",
     photo: alu,
+    isFeatured: false,
   },
   {
     id: 20,
@@ -468,6 +487,7 @@ const products = [
     farm: "Daudkandi, Cumilla",
     owner: "Uzzal Das",
     photo: tomato,
+    isFeatured: false,
   },
   {
     id: 21,
@@ -479,6 +499,7 @@ const products = [
     farm: "Daudkandi, Cumilla",
     owner: "Uzzal Das",
     photo: tomato,
+    isFeatured: false,
   },
   {
     id: 22,
@@ -490,6 +511,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: fishbox,
+    isFeatured: true,
   },
   {
     id: 23,
@@ -501,6 +523,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: fishbox2,
+    isFeatured: true,
   },
   {
     id: 24,
@@ -512,6 +535,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: rui,
+    isFeatured: true,
   },
   {
     id: 25,
@@ -523,6 +547,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: rui,
+    isFeatured: true,
   },
   {
     id: 26,
@@ -534,6 +559,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: katla,
+    isFeatured: false,
   },
   {
     id: 27,
@@ -545,6 +571,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: katla,
+    isFeatured: false,
   },
   {
     id: 28,
@@ -556,6 +583,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: sarputi,
+    isFeatured: false,
   },
   {
     id: 29,
@@ -567,6 +595,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: sarputi,
+    isFeatured: false,
   },
 ];
 

@@ -5,6 +5,13 @@ import { Inter } from 'next/font/google'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import StoreProvider from './provider';
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,6 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ClerkProvider>
     <html lang="en" data-theme="light">
       <body className={inter.className}>
         <StoreProvider>
@@ -25,7 +33,8 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </StoreProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
