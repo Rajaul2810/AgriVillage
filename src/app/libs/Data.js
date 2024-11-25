@@ -52,66 +52,193 @@ import vegetable from "../../../public/products/Seasonal-Mixed-Vegetable-Box1.pn
 import vegetable1 from "../../../public/products/Seasonal-Mixed-Vegetable-Box2.png"
 import capsicum from "../../../public/products/Mixed-Capsicum.png"
 
+//tourism spots
+import golap1 from "../../../public/projects/RoseVillage_1.jpg"
+import golap2 from "../../../public/projects/RoseVillage_2.jpg"
+import golap3 from "../../../public/projects/RoseVillage_3.jpg"
+import golap4 from "../../../public/projects/RoseVillage_4.jpg"
+import golap5 from "../../../public/projects/RoseVillage_5.jpg"
+import golap6 from "../../../public/projects/RoseVillage_6.jpg"
+
+import lotkon1 from "../../../public/projects/LotkonBari_1.jpg"
+import lotkon2 from "../../../public/projects/LotkonBari_2.jpg"
+import lotkon3 from "../../../public/projects/LotkonBari_3.jpg"
+import lotkon4 from "../../../public/projects/LotkonBari_4.jpg"
+import lotkon5 from "../../../public/projects/LotkonBari_5.jpg"
+import lotkon6 from "../../../public/projects/LotkonBari_6.jpg"
+import lotkon7 from "../../../public/projects/LotkonBari_7.jpg"
+import lotkon8 from "../../../public/projects/LotkonBari_8.jpg"
+import lotkon9 from "../../../public/projects/LotkonBari_9.jpg"
+
+import shimul1 from "../../../public/projects/ShimulBagan_1.jpg"
+import shimul2 from "../../../public/projects/ShimulBagan_2.jpg"
+import shimul3 from "../../../public/projects/ShimulBagan_3.jpg"
+import shimul4 from "../../../public/projects/ShimulBagan_4.jpg"
+import shimul5 from "../../../public/projects/ShimulBagan_5.jpg"
+import shimul6 from "../../../public/projects/ShimulBagan_6.jpg"
+import shimul7 from "../../../public/projects/ShimulBagan_7.jpg"
+import shimul8 from "../../../public/projects/ShimulBagan_8.jpg"
+import shimul9 from "../../../public/projects/ShimulBagan_9.jpg"
+
+import mangohub1 from "../../../public/projects/MangoGarden_1.jpg"
+import mangohub2 from "../../../public/projects/MangoGarden_2.jpg"
+import mangohub3 from "../../../public/projects/MangoGarden_3.jpg"
+import mangohub4 from "../../../public/projects/MangoGarden_4.jpg"
 
 
+import teagardens1 from "../../../public/projects/TeaGardensEcoTour_1.jpg"
+import teagardens2 from "../../../public/projects/TeaGardensEco-Tour_2.jpg"
+import teagardens3 from "../../../public/projects/TeaGardensEco-Tour_3.jpg"
+import teagardens4 from "../../../public/projects/TeaGardensEco-Tour_4.jpg"
+import teagardens5 from "../../../public/projects/TeaGardensEco-Tour_5.jpg"
+import teagardens6 from "../../../public/projects/TeaGardensEco-Tour_6.jpg"
+import teagardens7 from "../../../public/projects/TeaGardensEco-Tour_7.jpg"
+import teagardens8 from "../../../public/projects/TeaGardensEco-Tour_8.jpg"
+import teagardens9 from "../../../public/projects/TeaGardensEco-Tour_9.jpg"
+import teagardens10 from "../../../public/projects/TeaGardensEco-Tour_10.jpg"
 
-
+//mababa
+import manbaba1 from "../../../public/projects/Ma-BabaAgroFarmLtd._1.jpg"
+import manbaba2 from "../../../public/projects/Ma-BabaAgroFarmLtd._2.jpg"
+import manbaba3 from "../../../public/projects/Ma-BabaAgroFarmLtd._3.jpg"
+import manbaba4 from "../../../public/projects/Ma-BabaAgroFarmLtd._4.jpg"
+import manbaba5 from "../../../public/projects/Ma-BabaAgroFarmLtd._5.jpg"
+import manbaba6 from "../../../public/projects/Ma-BabaAgroFarmLtd._6.jpg"
+import manbaba7 from "../../../public/projects/Ma-BabaAgroFarmLtd._7.jpg"
+import manbaba8 from "../../../public/projects/Ma-BabaAgroFarmLtd._8.jpg"
+import manbaba9 from "../../../public/projects/Ma-BabaAgroFarmLtd._9.jpg"
 
 
 const projects = [
   {
+    id: 5,
+    photo: mababa ,
+    gallery: [manbaba1, manbaba2, manbaba3, manbaba4, manbaba5, manbaba6, manbaba7, manbaba8, manbaba9],
+    name: "Ma-Baba Agro Farm Ltd.",
+    season: "Year-Round",
+    location: "Sherpur Sadar, Mymensingh",
+    time: "7:00 AM - 7:00 PM",
+    entryFee: "100 BDT",
+    facilities: ["Accommodation", "Restaurant", "Parking"],
+    details: {
+      description: `Explore the grandeur of an 800-acre integrated farm producing a variety of fruits, vegetables, and livestock.`,
+      visitorFacilities: [
+        "Transport Service: Rent-a-car options.",
+        "Comfort & Hospitality: Clean restrooms and cottages.",
+        "Farm Produce Shopping: Buy fresh products at affordable prices."
+      ],
+      highlights: ["Learn modern farming techniques", "Ideal for family outings"]
+    }
+  },
+  {
+    id: 6,
+    photo: teagardens1,
+    gallery: [teagardens1, teagardens2, teagardens3, teagardens4, teagardens5, teagardens6, teagardens7, teagardens8, teagardens9, teagardens10],
+    name: "Tea Gardens Eco-Tour",
+    season: "Year-Round",
+    location: "Sreemangal, Sylhet",
+    time: "7:00 AM - 6:00 PM",
+    entryFee: "300 BDT",
+    facilities: ["Guided Tours", "Eco-Stay Options", "Tea-Tasting Sessions"],
+    details: {
+      description: `Embark on a refreshing journey to the lush tea gardens of Sreemangal.`,
+      visitorFacilities: [
+        "Rent-a-car or public transport assistance.",
+        "On-site food options with Sylheti flavors.",
+        "Farm-to-table shopping for organic tea leaves."
+      ],
+      highlights: ["Guided tours through plantations", "Eco-friendly accommodations"]
+    }
+  },
+  {
     id: 1,
-    name: "গোলাপ গ্রাম",
-    address: "সাহদুল্লাহপুর, সাভার",
-    description: "পুরোটা গ্রামটাই যেন গোলাপের বাগান! উঁচু জমিগুলো ছেয়ে আছে মিরান্ডি জাতের গোলাপে। লাল, হলুদ, সাদা—কত বর্ণের যে গোলাপ তার কোনো ইয়ত্তা নেই। যতদূর যাবেন গোলাপে ঢাকা চারপাশ আপনাকে মুগ্ধ করে রাখবে। সকালের শিশির ভেজা গোলাপে নরম আলোর ঝিকিমিকি। গ্রামের বুক চিরে চলে গেছে আঁকাবাঁকা সরু পথ। তার দু'পাশে বিস্তীর্ণ গোলাপের বাগান। ফুটে আছে টকটকে লাল গোলাপ। গ্রামে ছড়িয়ে পড়েছে গোলাপের সৌরভ।",
     photo: golap,
-    visitingHours: "সকাল ৮টা - সন্ধ্যা ৬টা",
-    entryFee: "৫০ টাকা",
-    bestTimeToVisit: "নভেম্বর - ফেব্রুয়ারি",
-    facilities: ["পার্কিং", "রেস্টুরেন্ট", "ফটোশুট স্পট", "গাইড সার্ভিস"],
-    contact: "০১৭১২-৩৪৫৬৭৮",
-    activities: ["গোলাপ বাগান ভ্রমণ", "ফটোগ্রাফি", "গোলাপ চাষ শিক্ষা"]
+    gallery: [golap1, golap2, golap3, golap4, golap5, golap6],
+    name: "গোলাপ গ্রাম (Rose Village)",
+    season: "November - February",
+    location: "Sahdullahpur, Savar",
+    time: "8:00 AM - 6:00 PM",
+    entryFee: "100 BDT",
+    facilities: ["Parking", "Restaurant", "Photoshoot Spots"],
+    details: {
+      description: `Imagine an entire village turned into a rose garden! The highlands are adorned with vibrant Mirandi roses in shades of red, yellow, and white.`,
+      visitorFacilities: [
+        "Transport Service: Convenient rent-a-car options.",
+        "Comfort & Hospitality: Reception, restrooms, and cozy cottage accommodations.",
+        "Food & Refreshments: Safe drinking water and delicious meals.",
+        "Affordable Farm Produce: Buy fresh agricultural products.",
+        "Educational & Recreational Opportunities: Ideal for study tours or picnics."
+      ],
+      audience: ["Corporate Teams", "Schools & Colleges", "Nature Enthusiasts"]
+    }
   },
   {
     id: 2,
-    name: "লটকনবাড়ীয়া",
-    address: "শিবপুর,নরসিংদী",
-    description: "লটকন মানেই নরসিংদী জেলার শিবপুর ৷ লটকন আমাদের সবারই প্রিয় ফল কে না পছন্দ করে, যারা সারাদিনই কাজে ব্যাস্ত থাকেন তাদের জন্য ১ দিনের খুব আরামপ্রিয় একটা ভ্রমন৷ লটকন বাগানের পাশাপাশি অনেক কিছু আপনার মন ভরে দিতে পারে বিশেষ করে মাটির তৈরি বাড়ি, চারিদিকের শান্ত পরিবেশ এগুলোতো আছে তার পাশাপাশি নানা ধরনের ফল তো আপনাকে অবশ্যই আকর্ষন করবে।",
     photo: lotkon,
-    visitingHours: "সকাল ৯টা - বিকাল ৫টা",
-    entryFee: "৪০ টাকা",
-    bestTimeToVisit: "মে - জুলাই",
-    facilities: ["পার্কিং", "টয়লেট", "ক্যাফেটেরিয়া", "পিকনিক স্পট"],
-    contact: "০১৮১৫-৯৮৭৬৫৪",
-    activities: ["লটকন চাষ দেখা", "ফল তোলা", "গ্রাম্য খাবার"]
+    gallery: [lotkon1, lotkon2, lotkon3, lotkon4, lotkon5, lotkon6, lotkon7, lotkon8, lotkon9],
+    name: "লটকন বাগান (Lotkon Bari)",
+    season: "May - July",
+    location: "Shibpur, Narsingdi",
+    time: "9:00 AM - 5:00 PM",
+    entryFee: "400 BDT",
+    facilities: ["Parking", "Toilets", "Cafeteria"],
+    details: {
+      description: `Experience the charm of Lotkon Bari, famous for producing the finest lotkon!`,
+      visitorFacilities: [
+        "Transport Service: Rent-a-car options for easy travel.",
+        "Comfortable Amenities: Reception area, restrooms, and cottages.",
+        "Food & Drinks: Safe drinking water and local meals.",
+        "Affordable Farm Produce: Fresh fruits at discounted rates."
+      ],
+      highlights: ["Unlimited lotkon tasting", "Special discounted rates for purchases"]
+    }
   },
   {
     id: 3,
-    name: "মা বাবার এগ্রোফার্ম লিমিটেড",
-    address: "শেরপুর সদর, ময়মনসিংহ",
-    description: "প্রায় ৮০০ একরের বিশাল এই সমন্বিত কৃষি খামারে একই সঙ্গে উৎপাদন হচ্ছে মাছ, হাঁস, মুরগি, গরু, ছাগল, বিভিন্ন ধরনের ফল ও সবজি। বর্তমানে বাগানটিতে মাল্টা, কমলা, আঙুর, ড্রাগন, লটকন, পেঁপেঁ, পেয়ারা, লেবু, কুল ও সৌদি খেঁজুর, এভোকাডো, ছবেদা, মালবেরি, ত্বীন ফল, আলুবোখারা, ভিয়েতনামী নারিকেল, কিউই, আনার, থাই সরিষাসহ আরও ২৭১টি জাতের ফলের চাষ হয়। এছাড়াও খামারে রয়েছে না প্রজাতির হাঁস-মুরগী, গরু-ছাগল এবং কবুতর। শিশুদের সাথে নিয়ে পারিবারিক সময় কাটানোর জন্য একটি আদর্শ স্থান",
-    photo: mababa,
-    visitingHours: "সকাল ৭টা - সন্ধ্যা ৭টা",
-    entryFee: "১০০ টাকা",
-    bestTimeToVisit: "সারা বছর",
-    facilities: ["আবাসিক সুবিধা", "রেস্টুরেন্ট", "পার্কিং", "প্লেগ্রাউন্ড", "কৃষি প্রশিক্ষণ"],
-    contact: "০১৯১৪-৭৮৯০১২",
-    activities: ["কৃষি শিক্ষা", "পশুপালন দেখা", "ফল-সবজি সংগ্রহ", "মাছ ধরা"]
+    photo: shimul1,
+    gallery: [shimul1, shimul2, shimul3, shimul4, shimul5, shimul6, shimul7, shimul8, shimul9],
+    name: "Shimul Bagan (Silk Cotton Forest)",
+    season: "February - March",
+    location: "Sunamganj",
+    time: "9:00 AM - 6:00 PM",
+    entryFee: "300 BDT",
+    facilities: ["Parking", "Walking Trails", "Picnic Spots"],
+    details: {
+      description: `Explore the vibrant red silk cotton flowers transforming the forest into a mesmerizing paradise.`,
+      visitorFacilities: [
+        "Secure parking spaces.",
+        "Well-maintained walking trails.",
+        "Local snacks and refreshments."
+      ],
+      highlights: ["Nature’s Wonderland", "Perfect for photography", "Ideal picnic destination"]
+    }
   },
   {
     id: 4,
-    name: "মা বাবার এগ্রোফার্ম লিমিটেড",
-    address: "শেরপুর সদর, ময়মনসিংহ",
-    description: "প্রায় ৮০০ একরের বিশাল এই সমন্বিত কৃষি খামারে একই সঙ্গে উৎপাদন হচ্ছে মাছ, হাঁস, মুরগি, গরু, ছাগল, বিভিন্ন ধরনের ফল ও সবজি। বর্তমানে বাগানটিতে মাল্টা, কমলা, আঙুর, ড্রাগন, লটকন, পেঁপেঁ, পেয়ারা, লেবু, কুল ও সৌদি খেঁজুর, এভোকাডো, ছবেদা, মালবেরি, ত্বীন ফল, আলুবোখারা, ভিয়েতনামী নারিকেল, কিউই, আনার, থাই সরিষাসহ আরও ২৭১টি জাতের ফলের চাষ হয়। এছাড়াও খামারে রয়েছে না প্রজাতির হাঁস-মুরগী, গরু-ছাগল এবং কবুতর। শিশুদের সাথে নিয়ে পারিবারিক সময় কাটানোর জন্য একটি আদর্শ স্থান",
-    photo: mababa,
-    visitingHours: "সকাল ৭টা - সন্ধ্যা ৭টা",
-    entryFee: "১০০ টাকা",
-    bestTimeToVisit: "সারা বছর",
-    facilities: ["আবাসিক সুবিধা", "রেস্টুরেন্ট", "পার্কিং", "প্লেগ্রাউন্ড", "কৃষি প্রশিক্ষণ"],
-    contact: "০১৯১৪-৭৮৯০১২",
-    activities: ["কৃষি শিক্ষা", "পশুপালন দেখা", "ফল-সবজি সংগ্রহ", "মাছ ধরা"]
+    photo: mangohub1,
+    gallery: [mangohub1, mangohub2, mangohub3, mangohub4],
+    name: "Mango Tourism Hub",
+    season: "May - July",
+    location: "Chapai Nawabganj",
+    time: "8:00 AM - 5:00 PM",
+    entryFee: "100 BDT",
+    facilities: ["Seasonal Fruit Picking", "Guided Farm Tours", "On-Site Farm Store"],
+    details: {
+      description: `Indulge in unlimited mango tasting straight from the orchards in the Mango Capital.`,
+      visitorFacilities: [
+        "Seasonal Fruit Picking: Pick and eat fresh mangoes.",
+        "On-Site Farm Store: Purchase mangoes and organic products.",
+        "Transport Assistance: Rent-a-car options for easy travel."
+      ],
+      highlights: ["Unlimited Mango Eating", "Learn mango cultivation"]
+    }
   },
-]
+  
+];
+
+
+
+
 
 const projectBenefits = [
   {

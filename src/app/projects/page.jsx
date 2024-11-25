@@ -48,7 +48,7 @@ const Projects = () => {
                     alt={item.name}
                   />
                   <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">
-                    {item.bestTimeToVisit}
+                    {item?.season}
                   </div>
                 </div>
 
@@ -60,18 +60,18 @@ const Projects = () => {
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center gap-2 text-gray-600">
                       <FaMapMarkerAlt className="text-green-500" />
-                      <span className="text-sm">{item.address}</span>
+                      <span className="text-sm">{item?.location}</span>
                     </div>
 
                     <div className="flex items-center gap-2 text-gray-600">
                       <FaClock className="text-green-500" />
-                      <span className="text-sm">{item.visitingHours}</span>
+                      <span className="text-sm">{item?.time}</span>
                     </div>
 
                     <div className="flex items-center gap-2 text-gray-600">
                       <FaMoneyBillWave className="text-green-500" />
                       <span className="text-sm">
-                        Entry Fee: {item.entryFee}
+                        Entry Fee: {item?.entryFee}
                       </span>
                     </div>
                   </div>

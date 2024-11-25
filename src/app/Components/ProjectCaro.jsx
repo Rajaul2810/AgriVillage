@@ -112,7 +112,7 @@ const ProjectCaro = () => {
                     alt={item.name}
                   />
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-full text-sm shadow-md">
-                    {item.bestTimeToVisit}
+                    {item?.season}
                   </div>
                 </div>
 
@@ -124,18 +124,18 @@ const ProjectCaro = () => {
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center gap-2 text-gray-600 hover:text-green-500 transition-colors">
                       <FaMapMarkerAlt className="text-green-500" />
-                      <span className="text-sm">{item.address}</span>
+                      <span className="text-sm">{item?.location}</span>
                     </div>
 
                     <div className="flex items-center gap-2 text-gray-600 hover:text-green-500 transition-colors">
                       <FaClock className="text-green-500" />
-                      <span className="text-sm">{item.visitingHours}</span>
+                      <span className="text-sm">{item?.time}</span>
                     </div>
 
                     <div className="flex items-center gap-2 text-gray-600 hover:text-green-500 transition-colors">
                       <FaMoneyBillWave className="text-green-500" />
                       <span className="text-sm">
-                        Entry Fee: {item.entryFee}
+                        Entry Fee: {item?.entryFee}
                       </span>
                     </div>
                   </div>

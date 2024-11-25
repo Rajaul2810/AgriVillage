@@ -48,7 +48,7 @@ const FeatureProducts = () => {
           </Link>
         </div>
         <div className="flex justify-center mt-12">
-          <div className="gap-4 w-11/12 md:w-3/4 sm:w-full  grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
+          <div className="gap-4 w-11/12 md:w-10/12  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {featuredProducts.map((item) => (
               <div
                 key={item.id}

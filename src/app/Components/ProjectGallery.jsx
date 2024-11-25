@@ -1,15 +1,17 @@
 import Image from 'next/image'
 import React from 'react'
+import { projects } from '../libs/Data'
 
-const ProjectGallery = ({imgs}) => {
+const ProjectGallery = ({params}) => {
+  const project = projects.find((pd)=>pd.id == params.id)
   return (
     <div>
         <div className=" flex justify-center mt-5 pb-10">
             <div className=" w-11/12 grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-              {imgs.map((item) => (
-                <div key={item.id} className="">
+              {project?.gallery.map((item, index) => (
+                <div key={index} className="">
                   <Image
-                    src={item.photo}
+                    src={item}
                     alt=""
                     className=" rounded-sm shadow-sm"
                   />

@@ -1,12 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  FiCamera,
-  FiInfo,
-  FiMapPin,
-  FiPackage,
-  FiUsers,
-} from "react-icons/fi";
+import { FiCamera, FiInfo, FiMapPin, FiPackage, FiUsers } from "react-icons/fi";
 
 import img1 from "../../../../public/assets/girl.jpg";
 import Image from "next/image";
@@ -14,13 +8,8 @@ import ProjectInfo from "@/app/Components/ProjectInfo";
 import ProjectReview from "@/app/Components/ProjectReview";
 import ProjectGallery from "@/app/Components/ProjectGallery";
 import ProjectPlan from "@/app/Components/ProjectPlan";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
-const imgs = [
-  { id: 1, photo: img1 },
-  { id: 2, photo: img1 },
-  { id: 3, photo: img1 },
-  { id: 4, photo: img1 },
-];
 const reviews = [
   { id: 1, photo: img1 },
   { id: 2, photo: img1 },
@@ -81,7 +70,7 @@ const Details = ({ params }) => {
             </div>
           )}
           {change === "plan" && <ProjectPlan />}
-          {change === "gallery" && <ProjectGallery imgs={imgs} />}
+          {change === "gallery" && <ProjectGallery params={params} />}
           {change === "review" && <ProjectReview reviews={reviews} />}
         </div>
       </section>

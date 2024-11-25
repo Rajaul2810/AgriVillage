@@ -10,6 +10,8 @@ import qa from "../../../public/assets/qa.jpg";
 import { toast } from "react-toastify";
 import TourPackage from "./TourPackage";
 import { GiFarmTractor } from "react-icons/gi";
+import { FaCheckCircle, FaMapMarkerAlt } from "react-icons/fa";
+import { BiCheckCircle } from "react-icons/bi";
 
 const ProjectInfo = ({ params }) => {
   const [count, setCount] = useState(1);
@@ -32,11 +34,17 @@ const ProjectInfo = ({ params }) => {
               <span className="text-3xl font-bold text-green-600 relative inline-block">
                 <span className="relative">{project.name}</span>
               </span>
-              <p className="text-lg text-gray-700">{project.address}</p>
-              <p className="text-base text-gray-600">{project.description}</p>
+              <p className="text-lg text-gray-700 flex items-center gap-2">
+                {" "}
+                <FaMapMarkerAlt className="text-green-600" />{" "}
+                {project?.location}
+              </p>
+              <p className="text-base text-gray-600">
+                {project?.details?.description}
+              </p>
               <div className="flex items-center text-green-600 py-2">
                 <TbCurrencyTaka size={25} />
-                <p className="text-xl font-semibold">100</p>
+                <p className="text-xl font-semibold">{project?.entryFee}</p>
               </div>
               <div className="flex items-center gap-4 border bg-white shadow-md rounded-md p-3 w-fit">
                 <button onClick={() => setCount(count - 1)} className="btn">
@@ -61,20 +69,33 @@ const ProjectInfo = ({ params }) => {
               <ProjectBenefits />
             </div>
             <div className="py-10">
-              <div className="relative">
-                <Image
-                  src={qa}
-                  alt="Quality Assurance"
-                  className="h-96 w-full brightness-50 rounded-md"
-                />
-                <button className="btn btn-lg btn-circle absolute top-2/4 left-2/4 shadow-md bg-gradient-to-r from-green-500 to-lime-400">
-                  <BsFillCaretRightFill />
-                </button>
+              <div className="space-y-2">
+                {project?.details?.highlights.map((item, index) => (
+                  <div key={index} className=" flex gap-2 my-5 items-center">
+                    <p className="p-2 rounded-full shadow-md bg-white">
+                      <BiCheckCircle color="green" />
+                    </p>
+                    <p className=" text-black">{item}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-2">
+                {project?.details?.visitorFacilities.map((item, index) => (
+                  <div key={index} className=" flex gap-2 my-5 items-center">
+                    <p className="p-2 rounded-full shadow-md bg-white">
+                      <BiCheckCircle color="green" />
+                    </p>
+                    <p className=" text-black">{item}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
-        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle text-black">
+        <dialog
+          id="my_modal_5"
+          className="modal modal-bottom sm:modal-middle text-black"
+        >
           <div className="modal-box">
             <h3 className="font-bold text-lg">Booking Information</h3>
             <div className="py-4">
