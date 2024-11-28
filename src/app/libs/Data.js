@@ -52,6 +52,12 @@ import vegetable from "../../../public/products/Seasonal-Mixed-Vegetable-Box1.pn
 import vegetable1 from "../../../public/products/Seasonal-Mixed-Vegetable-Box2.png"
 import capsicum from "../../../public/products/Mixed-Capsicum.png"
 
+//plants 
+import plants from "../../../public/products/Package1.jpeg"
+import plants2 from "../../../public/products/Package2.jpeg"
+import plants3 from "../../../public/products/Package3.jpeg"
+import plants4 from "../../../public/products/Package4.jpeg"
+import plants5 from "../../../public/products/Package5.jpeg"
 //tourism spots
 import golap1 from "../../../public/projects/RoseVillage_1.jpg"
 import golap2 from "../../../public/projects/RoseVillage_2.jpg"
@@ -674,7 +680,7 @@ const products = [
     farm: "Paba, Rajshahi",
     owner: "Kamrul",
     photo: rui,
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     id: 26,
@@ -723,6 +729,66 @@ const products = [
     owner: "Kamrul",
     photo: sarputi,
     isFeatured: false,
+  },
+  {
+    id: 30,
+    name: "Winter Vegetable Seeds Package(Sweet Pumpkin, Bottle Gourd, Bitter Gourd, Lady's Finger, Radish, Spinach)",
+    category: "Plants",
+    price: 500,
+    quantity: "Package",
+    deliveryTime: "Delivery 1-2 days",
+    farm: "N/A",
+    owner: "N/A",
+    photo: plants,
+    isFeatured: false,
+  },
+  {
+    id: 31,
+    name: "All Seasonal Flower Plants(Hybrid Kamini, Gondhoraj Flower, Chinese Tagor, Madobi Lata/ Madhumalti, Allamanda)",
+    category: "Plants",
+    price: 2000,
+    quantity: "Package",
+    deliveryTime: "Delivery 1-2 days",
+    farm: "N/A",
+    owner: "N/A",
+    photo: plants2,
+    isFeatured: false,
+  },
+  {
+    id: 32,
+    name: "Winter Flower Plants(Marigold, Zinnia, Petunia, Cosmos, Daisy)",
+    category: "Plants",
+    price: 1000,
+    quantity: "Package",
+    deliveryTime: "Delivery 1-2 days",
+    farm: "N/A",
+    owner: "N/A",
+    photo: plants3,
+    isFeatured: true,
+  },
+  {
+    id: 33,
+    name: "Herbal Plants(Lemon Tree, Curry Leaves, China Grass, Neem, Stevia/Diabetes Plant, Pathorkuchi, Tulsi, Mint)",
+    category: "Plants",
+    price: 3000,
+    quantity: "Package",
+    deliveryTime: "Delivery 1-2 days",
+    farm: "N/A",
+    owner: "N/A",
+    photo: plants4,
+    isFeatured: false,
+  },
+  {
+    id: 34,
+    name: "Fruit Plants( Hybrid Mango, Mulberry, Orange, Guava)",
+    category: "Plants",
+    price: 4000,
+    quantity: "Package",
+    deliveryTime: "Delivery 1-2 days",
+    farm: "N/A",
+    owner: "N/A",
+    photo: plants5,
+    isFeatured: true,
   },
 ];
 

@@ -101,40 +101,45 @@ const EventDetails = ({ params }) => {
                   Entry Free {event?.entryFee}
                 </p>
               </div>
-              <div className="flex items-center gap-10 border bg-white shadow-md rounded-md p-3 w-fit">
-                <button onClick={() => setCount(count - 1)} className="btn">
-                  <TbMinus size={20} />
-                </button>
-                <p className="font-bold text-lg">{count}</p>
-                <button onClick={() => setCount(count + 1)} className="btn">
-                  <TbPlus size={20} />
-                </button>
-              </div>
-              <button
-                onClick={() =>
-                  document.getElementById("my_modal_5").showModal()
-                }
-                className="btn bg-gradient-to-r from-green-400 to-lime-300 my-5"
-              >
-                Booking Now <FiArrowUpRight />
-              </button>
-            </div>
-            <div className="py-10">
-              <EventBenefits />
-            </div>
-            <div className="py-10">
-              <div className="relative">
-                <Image
-                  src={qa}
-                  alt="Quality Assurance"
-                  className="h-96 w-full brightness-50 rounded-md"
-                />
-                <button className="btn btn-lg btn-circle absolute top-2/4 left-2/4 shadow-md bg-gradient-to-r from-green-500 to-lime-300">
-                  <BsFillCaretRightFill />
-                </button>
-              </div>
+              {event?.isCompleted ? (
+                <div className="bg-red-500 text-white p-2 rounded-md shadow-lg">
+                  <p className="text-center font-bold">Event Completed</p>
+                </div>
+              ) : (
+                <>
+                  <div className="flex items-center gap-10 border bg-white shadow-md rounded-md p-3 w-fit">
+                    <button onClick={() => setCount(count - 1)} className="btn">
+                      <TbMinus size={20} />
+                    </button>
+                    <p className="font-bold text-lg">{count}</p>
+                    <button onClick={() => setCount(count + 1)} className="btn">
+                      <TbPlus size={20} />
+                    </button>
+                  </div>
+                  <button
+                    onClick={() =>
+                      document.getElementById("my_modal_5").showModal()
+                    }
+                    className="btn bg-gradient-to-r from-green-400 to-lime-300 my-5"
+                  >
+                    Booking Now <FiArrowUpRight />
+                  </button>
+                </>
+              )}
             </div>
           </div>
+        </div>
+        <div className="py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+          {event.gallery.length > 0 &&
+            event.gallery.map((item, index) => (
+              <div key={index} className="">
+                <Image
+                  src={item}
+                  alt={event.name}
+                  className="w-full h-48 object-fill rounded-md shadow-md"
+                />
+              </div>
+            ))}
         </div>
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
           <div className="modal-box">

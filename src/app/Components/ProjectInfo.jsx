@@ -65,9 +65,9 @@ const ProjectInfo = ({ params }) => {
               </button>
             </div>
 
-            <div className="py-10">
+            {/* <div className="py-10">
               <ProjectBenefits />
-            </div>
+            </div> */}
             <div className="py-10">
               <div className="space-y-2">
                 {project?.details?.highlights.map((item, index) => (
@@ -127,12 +127,17 @@ const ProjectInfo = ({ params }) => {
                 readOnly
               />
               <br />
-              <button
-                onClick={() => toast("Order Successful")}
-                className="btn bg-gradient-to-r from-green-500 to-lime-400 my-1 flex items-center gap-2"
+              <a
+                href={`https://shop.bkash.com/ayal-corp-limitedrm57578/paymentlink`}
+                target="_blank"
               >
-                Place Order <GiFarmTractor />
-              </button>
+                <button
+                  onClick={() => toast("Order Successful")}
+                  className="btn bg-gradient-to-r from-green-500 to-lime-400 my-1 flex items-center gap-2"
+                >
+                  Place Order <GiFarmTractor />
+                </button>
+              </a>
             </div>
             <div className="modal-action">
               <form method="dialog">

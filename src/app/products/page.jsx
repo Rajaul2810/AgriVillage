@@ -41,14 +41,14 @@ const Products = () => {
         ? prev.filter((id) => id !== productId)
         : [...prev, productId]
     );
-    toast("Add to wishlist Successfully");
+    toast.success("Add to wishlist Successfully");
   };
 
   const { cartData, setCartData } = useContext(StoreContext);
   const handleCart = (product) => {
     const newData = { product };
     setCartData([...cartData, newData]);
-    toast("Add to card Successfully");
+    toast.success("Add to cart Successfully");
   };
 
   const filteredProducts =

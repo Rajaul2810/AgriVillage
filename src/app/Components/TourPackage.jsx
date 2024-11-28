@@ -9,7 +9,7 @@ const TourPackage = () => {
       id: 1,
       type: "Single",
       icon: <FaUser className="text-3xl text-blue-500" />,
-      price: 99,
+      price: 1500,
       color: "blue",
       features: [
         "Full day farm tour",
@@ -23,7 +23,7 @@ const TourPackage = () => {
       id: 2, 
       type: "Couple",
       icon: <FaHeart className="text-3xl text-pink-500" />,
-      price: 179,
+      price: 2700,
       color: "pink",
       features: [
         "Romantic farm tour for two",
@@ -37,7 +37,7 @@ const TourPackage = () => {
       id: 3,
       type: "Family",
       icon: <FaHome className="text-3xl text-green-500" />,
-      price: 299,
+      price: 5500,
       color: "green", 
       features: [
         "Family farm adventure (4 members)",
@@ -51,7 +51,7 @@ const TourPackage = () => {
       id: 4,
       type: "Group",
       icon: <FaUsers className="text-3xl text-purple-500" />,
-      price: 599,
+      price: 9999,
       color: "purple",
       features: [
         "Group tour (10 people)",
@@ -65,7 +65,7 @@ const TourPackage = () => {
       id: 5,
       type: "Corporate",
       icon: <FaBuilding className="text-3xl text-orange-500" />,
-      price: 999,
+      price: 19900,
       color: "orange",
       features: [
         "Customized corporate program",
@@ -110,7 +110,7 @@ const TourPackage = () => {
                 {pkg.icon}
                 <h3 className="text-xl font-bold text-gray-800 mt-4">{pkg.type} Package</h3>
                 <div className="mt-4">
-                  <span className="text-3xl font-bold text-gray-800">${pkg.price}</span>
+                  <span className="text-3xl font-bold text-gray-800">৳{pkg.price}</span>
                   <span className="text-gray-500">/{pkg.type}</span>
                 </div>
               </div>
@@ -126,7 +126,7 @@ const TourPackage = () => {
                 </ul>
 
                 <Link 
-                  href="#"
+                  href="https://shop.bkash.com/ayal-corp-limitedrm57578/paymentlink/"
                   className="mt-6 block w-full py-3 px-6 text-center text-white rounded-lg transition-colors duration-300 bg-green-500 hover:bg-green-600"
                 >
                   Book Now

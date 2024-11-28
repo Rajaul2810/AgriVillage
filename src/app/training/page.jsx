@@ -530,9 +530,14 @@ const Training = () => {
                         ৳{selectedWorkshop.price}
                       </p>
                     </div>
-                    <button className="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors duration-300 font-medium">
-                      Register Now
-                    </button>
+                    <a
+                      href={`https://shop.bkash.com/ayal-corp-limitedrm57578/paymentlink`}
+                      target="_blank"
+                    >
+                      <button className="bg-emerald-600 text-white px-8 py-3 rounded-lg hover:bg-emerald-700 transition-colors duration-300 font-medium">
+                        Register Now
+                      </button>
+                    </a>
                   </div>
                 )}
               </div>
