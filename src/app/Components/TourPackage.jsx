@@ -126,7 +126,7 @@ const TourPackage = () => {
                 </ul>
 
                 <Link 
-                  href="https://shop.bkash.com/ayal-corp-limitedrm57578/paymentlink/"
+                  href="/customized-project"
                   className="mt-6 block w-full py-3 px-6 text-center text-white rounded-lg transition-colors duration-300 bg-green-500 hover:bg-green-600"
                 >
                   Book Now

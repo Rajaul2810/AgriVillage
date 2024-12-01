@@ -39,31 +39,31 @@ export default function DashboardLayout({ children }) {
       route: "/dashboard/wishlist",
       icon: <FiHeart className="text-red-500"/>,
     },
-    {
-      title: "Messages",
-      route: "/dashboard/messages",
-      icon: <FiMessageSquare className="text-purple-500"/>,
-    },
+    // {
+    //   title: "Messages",
+    //   route: "/dashboard/messages",
+    //   icon: <FiMessageSquare className="text-purple-500"/>,
+    // },
     {
       title: "Order History",
       route: "/dashboard/orderHistory",
       icon: <FiTruck className="text-orange-500"/>,
     },
-    {
-      title: "Transactions",
-      route: "/dashboard/transactions",
-      icon: <FiDollarSign className="text-emerald-500"/>,
-    },
-    {
-      title: "Settings",
-      route: "/dashboard/settings",
-      icon: <FiSettings className="text-gray-500"/>,
-    },
-    {
-      title: "Security",
-      route: "/dashboard/password",
-      icon: <FiLock className="text-amber-500"/>,
-    },
+    // {
+    //   title: "Transactions",
+    //   route: "/dashboard/transactions",
+    //   icon: <FiDollarSign className="text-emerald-500"/>,
+    // },
+    // {
+    //   title: "Settings",
+    //   route: "/dashboard/settings",
+    //   icon: <FiSettings className="text-gray-500"/>,
+    // },
+    // {
+    //   title: "Security",
+    //   route: "/dashboard/password",
+    //   icon: <FiLock className="text-amber-500"/>,
+    // },
   ];
 
   const dashboardFormOwnerRoutes = [

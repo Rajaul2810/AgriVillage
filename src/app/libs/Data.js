@@ -51,6 +51,9 @@ import tomato from "../../../public/products/Tomato.png"
 import vegetable from "../../../public/products/Seasonal-Mixed-Vegetable-Box1.png"
 import vegetable1 from "../../../public/products/Seasonal-Mixed-Vegetable-Box2.png"
 import capsicum from "../../../public/products/Mixed-Capsicum.png"
+import narikel from "../../../public/products/Narikel.png"
+import mango from "../../../public/products/Mango.png"
+import guava from "../../../public/products/Guava.png"
 
 //plants 
 import plants from "../../../public/products/Package1.jpeg"
@@ -427,7 +430,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Noakhali",
     owner: "Delwar Hossain Riyad",
-    photo: watermelon,
+    photo: narikel,
     isFeatured: false,
   },
   {
@@ -439,7 +442,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Noakhali",
     owner: "Delwar Hossain Riyad",
-    photo: watermelon,
+    photo: narikel,
     isFeatured: false,
   },
   {
@@ -451,7 +454,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Noakhali",
     owner: "Delwar Hossain Riyad",
-    photo: watermelon,
+    photo: narikel,
     isFeatured: false,
   },
   {
@@ -463,7 +466,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Noakhali",
     owner: "Manzurul Karim",
-    photo: banana,
+    photo: guava,
     isFeatured: false,
   },
   {
@@ -475,7 +478,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Noakhali",
     owner: "Manzurul Karim",
-    photo: banana,
+    photo: guava,
     isFeatured: false,
   },
   {
@@ -487,7 +490,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Narsingdi",
     owner: "Mahtab Karim",
-    photo: banana,
+    photo: mango,
     isFeatured: false,
   },
   {
@@ -511,7 +514,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Bagha, Rajshahi",
     owner: "KM Siddiqui",
-    photo: malta,
+    photo: mango,
     isFeatured: false,
   },
   {
@@ -523,7 +526,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Bagha, Rajshahi",
     owner: "KM Siddiqui",
-    photo: malta,
+    photo: mango,
     isFeatured: false,
   },
   {
@@ -535,7 +538,7 @@ const products = [
     deliveryTime: "Delivery 1-2 days",
     farm: "Bagha, Rajshahi",
     owner: "KM Siddiqui",
-    photo: malta,
+    photo: mango,
     isFeatured: false,
   },
   {

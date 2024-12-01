@@ -36,7 +36,7 @@ const ProjectPlan = () => {
           <hr />
         </li>
         <li>
-          <hr  />
+          <hr />
           <div className="timeline-middle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ const ProjectPlan = () => {
               </li>
             </div>
           </div>
-          <hr  />
+          <hr />
         </li>
         <li>
           <hr />
@@ -140,8 +140,8 @@ const ProjectPlan = () => {
             </p>
             <div>
               <li>
-                <b>৬:৩০ টা:</b> হোটেলে ফিরে আসুন এবং পরিবারের সঙ্গে একটি 
-                বিকেলে উপভোগ করুন।
+                <b>৬:৩০ টা:</b> হোটেলে ফিরে আসুন এবং পরিবারের সঙ্গে একটি বিকেলে
+                উপভোগ করুন।
               </li>
               <li>
                 <b> ৮:০০ টা: </b> পরিবারের সাথে বন্ধুত্বপূর্ণ খেলা বন্ধুর কৌতুক
