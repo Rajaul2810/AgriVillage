@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import pf from "../../../../public/assets/girl.jpg";
+import pf from "../../../../public/assets/user.jpg";
 import Image from "next/image";
 import { FiEdit3, FiMail, FiPhone, FiUser, FiMapPin, FiCalendar } from "react-icons/fi";
 

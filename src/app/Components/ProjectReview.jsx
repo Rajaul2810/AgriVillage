@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { FaStar } from "react-icons/fa";
 import { FiStar } from "react-icons/fi";
 
 const ProjectReview = ({ reviews }) => {
@@ -12,10 +13,8 @@ const ProjectReview = ({ reviews }) => {
                 key={review.id}
                 className=" shadow-sm rounded-md p-3 bg-white h-fit text-black"
               >
-                <p className=" text-xs text-justify pb-2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
-                  reiciendis aperiam expedita doloremque perferendis incidunt
-                  distinctio neque, corporis non iusto?
+                <p className=" text-sm text-justify pb-2">
+                  {review.message}
                 </p>
                 <hr />
                 <div className=" flex justify-between items-center">
@@ -25,10 +24,10 @@ const ProjectReview = ({ reviews }) => {
                     className=" rounded-full shadow-sm h-12 w-12"
                   />
                   <div className="">
-                    <h1 className=" text-md font-bold">Rajaul Hira</h1>
-                    <p className=" text-sm text-gray-700">hira@gmail.com</p>
+                    <h1 className=" text-md font-bold">{review.name}</h1>
+                    <p className=" text-sm text-gray-700">{review.email}</p>
                     <p className=" text-yellow-500 flex">
-                      <FiStar /> <FiStar /> <FiStar /> <FiStar /> <FiStar />
+                      <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStar />
                     </p>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import wel from '../../../public/assets/girl.jpg'
+import wel from '../../../public/projects/TeaGardensEco-Tour_7.jpg'
 import village from '../../../public/assets/sunflower.jpg'
 import { BsFillCheckCircleFill, BsArrowRightCircle } from 'react-icons/bs'
 import { FaLeaf, FaSeedling, FaStore, FaTractor, FaUsers } from 'react-icons/fa'

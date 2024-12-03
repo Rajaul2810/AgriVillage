@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FiCamera, FiInfo, FiMapPin, FiPackage, FiUsers } from "react-icons/fi";
 
-import img1 from "../../../../public/assets/girl.jpg";
+import img1 from "../../../../public/assets/user.jpg";
 import Image from "next/image";
 import ProjectInfo from "@/app/Components/ProjectInfo";
 import ProjectReview from "@/app/Components/ProjectReview";
@@ -11,10 +11,11 @@ import ProjectPlan from "@/app/Components/ProjectPlan";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 const reviews = [
-  { id: 1, photo: img1 },
-  { id: 2, photo: img1 },
-  { id: 3, photo: img1 },
-  { id: 4, photo: img1 },
+  { id: 1, photo: img1, name: "Mohammad Ali", email: "mohammad.ali@example.com", rating: 5, message: "I loved the agriturism experience here, beautiful and peaceful environment." },
+  { id: 2, photo: img1, name: "Salma Khatun", email: "salma.khatun@example.com", rating: 5, message: "The food and environment were great, I had a wonderful time at this agriturism place." },
+  { id: 3, photo: img1, name: "Zahirul Islam", email: "zahirul.islam@example.com", rating: 5, message: "The local food and environment were excellent, I highly recommend this agriturism place to everyone." },
+  { id: 4, photo: img1, name: "Farjana Akhtar", email: "farjana.akhtar@example.com", rating: 5, message: "The service and environment were great, I had a very relaxing time at this agriturism place." },
+  { id: 5, photo: img1, name: "Mohammad Rashed", email: "mohammad.rashed@example.com", rating: 5, message: "I had a wonderful time at this agriturism place, the local food and environment were excellent, I will definitely come back again." },
 ];
 
 const Details = ({ params }) => {

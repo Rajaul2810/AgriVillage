@@ -91,10 +91,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className=" bg-slate-900 p-5">
-        <p className=" text-white text-center">
-          &copy; Copyright, {new Date().getFullYear()} by AgriVillage
-        </p>
+      <div className=" bg-slate-900 p-5 flex justify-center">
+        <a
+          href="https://smarttrenddigital.com"
+          target="_blank"
+          className=" text-white text-center"
+        >
+          &copy; Copyright, {new Date().getFullYear()} by SMART-Trend Digital
+        </a>
       </div>
     </section>
   );
